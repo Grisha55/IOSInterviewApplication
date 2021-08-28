@@ -12,6 +12,7 @@
 		BEDDCDF926DA1A9A003C1CB3 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCDF826DA1A9A003C1CB3 /* RegistrationVC.swift */; };
 		BEDDCDFE26DA1A9C003C1CB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDDCDFD26DA1A9C003C1CB3 /* Assets.xcassets */; };
 		BEDDCE0126DA1A9C003C1CB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDDCDFF26DA1A9C003C1CB3 /* LaunchScreen.storyboard */; };
+		BEDDCE0B26DA22FE003C1CB3 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE0A26DA22FE003C1CB3 /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		BEDDCDFD26DA1A9C003C1CB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEDDCE0026DA1A9C003C1CB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEDDCE0226DA1A9C003C1CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEDDCE0A26DA22FE003C1CB3 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */,
 				BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */,
 				BEDDCDF826DA1A9A003C1CB3 /* RegistrationVC.swift */,
+				BEDDCE0A26DA22FE003C1CB3 /* RegistrationView.swift */,
 				BEDDCDFD26DA1A9C003C1CB3 /* Assets.xcassets */,
 				BEDDCDFF26DA1A9C003C1CB3 /* LaunchScreen.storyboard */,
 				BEDDCE0226DA1A9C003C1CB3 /* Info.plist */,
@@ -136,6 +139,7 @@
 				BEDDCDF926DA1A9A003C1CB3 /* RegistrationVC.swift in Sources */,
 				BEDDCDF526DA1A9A003C1CB3 /* AppDelegate.swift in Sources */,
 				BEDDCDF726DA1A9A003C1CB3 /* SceneDelegate.swift in Sources */,
+				BEDDCE0B26DA22FE003C1CB3 /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
