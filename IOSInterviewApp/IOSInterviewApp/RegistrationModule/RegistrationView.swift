@@ -7,9 +7,16 @@
 
 import UIKit
 
+protocol RegistrationViewDelegate: AnyObject {
+    func closeButtonAction()
+    func registerButtonAction()
+}
+
 class RegistrationView: UIView {
     
     // MARK: - Properties
+    
+    weak var registrationViewDelegate: RegistrationViewDelegate?
     
     private(set) lazy var registrationButton: UIButton = {
         var button = UIButton()
@@ -68,7 +75,7 @@ class RegistrationView: UIView {
         let label = UILabel()
         label.text = "Пароль"
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
     }()
     
@@ -117,7 +124,7 @@ class RegistrationView: UIView {
         let label = UILabel()
         label.text = "Логин"
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
     }()
     
@@ -164,7 +171,7 @@ class RegistrationView: UIView {
         let label = UILabel()
         label.text = "Имя"
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
     }()
     
@@ -182,18 +189,30 @@ class RegistrationView: UIView {
         button.setImage(UIImage(systemName: "person.fill.badge.plus"), for: .normal)
         button.backgroundColor = .purple
         button.layer.cornerRadius = 30
+        button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(loginButtonDidTapped), for: .touchUpInside)
         return button
     }()
+    
+    @objc private func loginButtonDidTapped() {
+        registrationViewDelegate?.registerButtonAction()
+    }
     
     private(set) lazy var closeButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "xmark"), for: .normal)
         button.backgroundColor = .white
         button.layer.cornerRadius = 30
+        button.tintColor = .black
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(closeButtonDidTapped), for: .touchUpInside)
         return button
     }()
+    
+    @objc private func closeButtonDidTapped() {
+        registrationViewDelegate?.closeButtonAction()
+    }
     
     private(set) lazy var topView: UIView = {
         let topView = UIView()

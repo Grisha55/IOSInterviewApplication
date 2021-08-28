@@ -13,6 +13,8 @@
 		BEDDCDFE26DA1A9C003C1CB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDDCDFD26DA1A9C003C1CB3 /* Assets.xcassets */; };
 		BEDDCE0126DA1A9C003C1CB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDDCDFF26DA1A9C003C1CB3 /* LaunchScreen.storyboard */; };
 		BEDDCE0B26DA22FE003C1CB3 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE0A26DA22FE003C1CB3 /* RegistrationView.swift */; };
+		BEDDCE1026DA56D6003C1CB3 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE0F26DA56D6003C1CB3 /* LogInVC.swift */; };
+		BEDDCE1226DA56E2003C1CB3 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1126DA56E2003C1CB3 /* LogInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BEDDCE0026DA1A9C003C1CB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEDDCE0226DA1A9C003C1CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEDDCE0A26DA22FE003C1CB3 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		BEDDCE0F26DA56D6003C1CB3 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
+		BEDDCE1126DA56E2003C1CB3 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +62,31 @@
 			children = (
 				BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */,
 				BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */,
-				BEDDCDF826DA1A9A003C1CB3 /* RegistrationVC.swift */,
-				BEDDCE0A26DA22FE003C1CB3 /* RegistrationView.swift */,
+				BEDDCE0E26DA56B9003C1CB3 /* LoginModule */,
+				BEDDCE0D26DA5678003C1CB3 /* RegistrationModule */,
 				BEDDCDFD26DA1A9C003C1CB3 /* Assets.xcassets */,
 				BEDDCDFF26DA1A9C003C1CB3 /* LaunchScreen.storyboard */,
 				BEDDCE0226DA1A9C003C1CB3 /* Info.plist */,
 			);
 			path = IOSInterviewApp;
+			sourceTree = "<group>";
+		};
+		BEDDCE0D26DA5678003C1CB3 /* RegistrationModule */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDCDF826DA1A9A003C1CB3 /* RegistrationVC.swift */,
+				BEDDCE0A26DA22FE003C1CB3 /* RegistrationView.swift */,
+			);
+			path = RegistrationModule;
+			sourceTree = "<group>";
+		};
+		BEDDCE0E26DA56B9003C1CB3 /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDCE0F26DA56D6003C1CB3 /* LogInVC.swift */,
+				BEDDCE1126DA56E2003C1CB3 /* LogInView.swift */,
+			);
+			path = LoginModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,10 +158,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDDCE1226DA56E2003C1CB3 /* LogInView.swift in Sources */,
 				BEDDCDF926DA1A9A003C1CB3 /* RegistrationVC.swift in Sources */,
 				BEDDCDF526DA1A9A003C1CB3 /* AppDelegate.swift in Sources */,
 				BEDDCDF726DA1A9A003C1CB3 /* SceneDelegate.swift in Sources */,
 				BEDDCE0B26DA22FE003C1CB3 /* RegistrationView.swift in Sources */,
+				BEDDCE1026DA56D6003C1CB3 /* LogInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
