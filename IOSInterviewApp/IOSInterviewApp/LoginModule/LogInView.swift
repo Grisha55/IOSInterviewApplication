@@ -25,13 +25,9 @@ class LogInView: UIView {
         button.layer.cornerRadius = 30
         button.tintColor = .black
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(loginButtonDidTapped), for: .touchUpInside)
+        button.isUserInteractionEnabled = false
         return button
     }()
-    
-    @objc private func loginButtonDidTapped() {
-        logInViewDelegate?.loginButtonAction()
-    }
     
     private(set) lazy var closeButton: UIButton = {
         let button = UIButton()
@@ -63,8 +59,13 @@ class LogInView: UIView {
         button.backgroundColor = .white
         button.layer.cornerRadius = 20
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(logInButtonDidTapped), for: .touchUpInside)
         return button
     }()
+    
+    @objc private func logInButtonDidTapped() {
+        logInViewDelegate?.loginButtonAction()
+    }
     
     private(set) lazy var passwordStack: UIStackView = {
         let stack = UIStackView()

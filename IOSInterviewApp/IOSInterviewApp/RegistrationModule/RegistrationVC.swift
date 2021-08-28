@@ -33,6 +33,8 @@ extension RegistrationVC: RegistrationViewDelegate {
     }
     
     func registerButtonAction() {
-        // TODO: Make transition to MenuVC
+        let tabBarC = TabBarController()
+        tabBarC.modalPresentationStyle = .fullScreen
+        self.present(tabBarC, animated: true, completion: nil)
     }
 }

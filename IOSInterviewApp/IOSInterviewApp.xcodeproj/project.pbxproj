@@ -15,6 +15,9 @@
 		BEDDCE0B26DA22FE003C1CB3 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE0A26DA22FE003C1CB3 /* RegistrationView.swift */; };
 		BEDDCE1026DA56D6003C1CB3 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE0F26DA56D6003C1CB3 /* LogInVC.swift */; };
 		BEDDCE1226DA56E2003C1CB3 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1126DA56E2003C1CB3 /* LogInView.swift */; };
+		BEDDCE1526DAA711003C1CB3 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1426DAA711003C1CB3 /* MenuVC.swift */; };
+		BEDDCE1726DAA71B003C1CB3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1626DAA71B003C1CB3 /* MenuView.swift */; };
+		BEDDCE1926DAA836003C1CB3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		BEDDCE0A26DA22FE003C1CB3 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		BEDDCE0F26DA56D6003C1CB3 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		BEDDCE1126DA56E2003C1CB3 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		BEDDCE1426DAA711003C1CB3 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		BEDDCE1626DAA71B003C1CB3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,8 @@
 			children = (
 				BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */,
 				BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */,
+				BEDDCE1326DAA6C7003C1CB3 /* MenuModule */,
+				BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */,
 				BEDDCE0E26DA56B9003C1CB3 /* LoginModule */,
 				BEDDCE0D26DA5678003C1CB3 /* RegistrationModule */,
 				BEDDCDFD26DA1A9C003C1CB3 /* Assets.xcassets */,
@@ -87,6 +95,15 @@
 				BEDDCE1126DA56E2003C1CB3 /* LogInView.swift */,
 			);
 			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		BEDDCE1326DAA6C7003C1CB3 /* MenuModule */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDCE1426DAA711003C1CB3 /* MenuVC.swift */,
+				BEDDCE1626DAA71B003C1CB3 /* MenuView.swift */,
+			);
+			path = MenuModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,8 +176,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEDDCE1226DA56E2003C1CB3 /* LogInView.swift in Sources */,
+				BEDDCE1726DAA71B003C1CB3 /* MenuView.swift in Sources */,
 				BEDDCDF926DA1A9A003C1CB3 /* RegistrationVC.swift in Sources */,
+				BEDDCE1926DAA836003C1CB3 /* TabBarController.swift in Sources */,
 				BEDDCDF526DA1A9A003C1CB3 /* AppDelegate.swift in Sources */,
+				BEDDCE1526DAA711003C1CB3 /* MenuVC.swift in Sources */,
 				BEDDCDF726DA1A9A003C1CB3 /* SceneDelegate.swift in Sources */,
 				BEDDCE0B26DA22FE003C1CB3 /* RegistrationView.swift in Sources */,
 				BEDDCE1026DA56D6003C1CB3 /* LogInVC.swift in Sources */,
