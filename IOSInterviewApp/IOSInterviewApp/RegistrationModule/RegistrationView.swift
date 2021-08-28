@@ -26,8 +26,13 @@ class RegistrationView: UIView {
         button.backgroundColor = .purple
         button.layer.cornerRadius = 20
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(registrationButtonDidTapped), for: .touchUpInside)
         return button
     }()
+    
+    @objc private func registrationButtonDidTapped() {
+        registrationViewDelegate?.registerButtonAction()
+    }
     
     private(set) lazy var passwordStack: UIStackView = {
         let stack = UIStackView()
@@ -191,13 +196,9 @@ class RegistrationView: UIView {
         button.layer.cornerRadius = 30
         button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(loginButtonDidTapped), for: .touchUpInside)
+        button.isUserInteractionEnabled = false
         return button
     }()
-    
-    @objc private func loginButtonDidTapped() {
-        registrationViewDelegate?.registerButtonAction()
-    }
     
     private(set) lazy var closeButton: UIButton = {
         let button = UIButton()

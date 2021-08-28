@@ -25,8 +25,11 @@ class LogInVC: UIViewController {
 }
 
 extension LogInVC: LogInViewDelegate {
+    
     func loginButtonAction() {
-        // TODO: Make transition to MenuVC
+        let tabBarC = TabBarController()
+        tabBarC.modalPresentationStyle = .fullScreen
+        self.present(tabBarC, animated: true, completion: nil)
     }
     
     func closeButtonAction() {
