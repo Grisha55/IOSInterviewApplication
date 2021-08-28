@@ -14,6 +14,7 @@ class RegistrationVC: UIViewController {
         
         let registrationView = RegistrationView()
         self.view = registrationView
+        registrationView.registrationViewDelegate = self
     }
     
     override func viewDidLoad() {
@@ -25,3 +26,13 @@ class RegistrationVC: UIViewController {
 
 }
 
+extension RegistrationVC: RegistrationViewDelegate {
+    
+    func closeButtonAction() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func registerButtonAction() {
+        // TODO: Make transition to MenuVC
+    }
+}
