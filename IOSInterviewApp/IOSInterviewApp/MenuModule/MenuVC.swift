@@ -13,6 +13,7 @@ class MenuVC: UIViewController {
         super.loadView()
         let menuView = MenuView()
         self.view = menuView
+        menuView.menuViewDelegate = self
     }
     
     override func viewDidLoad() {
@@ -22,4 +23,12 @@ class MenuVC: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 
+}
+
+extension MenuVC: MenuViewDelegate {
+    
+    func categoriesButtonAction() {
+        let categoriesVC = CategoriesVC()
+        self.navigationController?.pushViewController(categoriesVC, animated: true)
+    }
 }

@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol MenuViewDelegate: AnyObject {
+    func categoriesButtonAction()
+}
+
 class MenuView: UIView {
     
     // MARK: - Properties
+    
+    weak var menuViewDelegate: MenuViewDelegate?
     
     private(set) lazy var stackWithButtons: UIStackView = {
         let stack = UIStackView()
@@ -32,6 +38,7 @@ class MenuView: UIView {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 20
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(categoriesButtonDidTapped), for: .touchUpInside)
         return button
     }()
     
@@ -58,6 +65,10 @@ class MenuView: UIView {
     }
     
     // MARK: - Methods
+    
+    @objc private func categoriesButtonDidTapped() {
+        self.menuViewDelegate?.categoriesButtonAction()
+    }
     
     private func setupUI() {
         self.addSubview(stackWithButtons)
