@@ -20,6 +20,8 @@
 		BEDDCE1926DAA836003C1CB3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */; };
 		BEDDCE1C26DB6895003C1CB3 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1B26DB6895003C1CB3 /* SettingsVC.swift */; };
 		BEDDCE1E26DB68C5003C1CB3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1D26DB68C5003C1CB3 /* SettingsView.swift */; };
+		BEDDCE2126DB7AB3003C1CB3 /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE2026DB7AB3003C1CB3 /* CategoriesVC.swift */; };
+		BEDDCE2326DB7FB2003C1CB3 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE2226DB7FB2003C1CB3 /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BEDDCE1B26DB6895003C1CB3 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		BEDDCE1D26DB68C5003C1CB3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BEDDCE2026DB7AB3003C1CB3 /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
+		BEDDCE2226DB7FB2003C1CB3 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			children = (
 				BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */,
 				BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */,
+				BEDDCE1F26DB7A91003C1CB3 /* CategoriesModule */,
 				BEDDCE1A26DB686F003C1CB3 /* SettingsModule */,
 				BEDDCE1326DAA6C7003C1CB3 /* MenuModule */,
 				BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */,
@@ -118,6 +123,15 @@
 				BEDDCE1D26DB68C5003C1CB3 /* SettingsView.swift */,
 			);
 			path = SettingsModule;
+			sourceTree = "<group>";
+		};
+		BEDDCE1F26DB7A91003C1CB3 /* CategoriesModule */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDCE2026DB7AB3003C1CB3 /* CategoriesVC.swift */,
+				BEDDCE2226DB7FB2003C1CB3 /* CategoryCell.swift */,
+			);
+			path = CategoriesModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDDCE2326DB7FB2003C1CB3 /* CategoryCell.swift in Sources */,
+				BEDDCE2126DB7AB3003C1CB3 /* CategoriesVC.swift in Sources */,
 				BEDDCE1226DA56E2003C1CB3 /* LogInView.swift in Sources */,
 				BEDDCE1726DAA71B003C1CB3 /* MenuView.swift in Sources */,
 				BEDDCDF926DA1A9A003C1CB3 /* RegistrationVC.swift in Sources */,
