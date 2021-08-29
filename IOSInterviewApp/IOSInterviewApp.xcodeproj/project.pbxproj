@@ -18,6 +18,8 @@
 		BEDDCE1526DAA711003C1CB3 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1426DAA711003C1CB3 /* MenuVC.swift */; };
 		BEDDCE1726DAA71B003C1CB3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1626DAA71B003C1CB3 /* MenuView.swift */; };
 		BEDDCE1926DAA836003C1CB3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */; };
+		BEDDCE1C26DB6895003C1CB3 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1B26DB6895003C1CB3 /* SettingsVC.swift */; };
+		BEDDCE1E26DB68C5003C1CB3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1D26DB68C5003C1CB3 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		BEDDCE1426DAA711003C1CB3 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		BEDDCE1626DAA71B003C1CB3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		BEDDCE1B26DB6895003C1CB3 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		BEDDCE1D26DB68C5003C1CB3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			children = (
 				BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */,
 				BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */,
+				BEDDCE1A26DB686F003C1CB3 /* SettingsModule */,
 				BEDDCE1326DAA6C7003C1CB3 /* MenuModule */,
 				BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */,
 				BEDDCE0E26DA56B9003C1CB3 /* LoginModule */,
@@ -104,6 +109,15 @@
 				BEDDCE1626DAA71B003C1CB3 /* MenuView.swift */,
 			);
 			path = MenuModule;
+			sourceTree = "<group>";
+		};
+		BEDDCE1A26DB686F003C1CB3 /* SettingsModule */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDCE1B26DB6895003C1CB3 /* SettingsVC.swift */,
+				BEDDCE1D26DB68C5003C1CB3 /* SettingsView.swift */,
+			);
+			path = SettingsModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +198,8 @@
 				BEDDCDF726DA1A9A003C1CB3 /* SceneDelegate.swift in Sources */,
 				BEDDCE0B26DA22FE003C1CB3 /* RegistrationView.swift in Sources */,
 				BEDDCE1026DA56D6003C1CB3 /* LogInVC.swift in Sources */,
+				BEDDCE1C26DB6895003C1CB3 /* SettingsVC.swift in Sources */,
+				BEDDCE1E26DB68C5003C1CB3 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
