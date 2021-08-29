@@ -52,7 +52,8 @@ extension CategoriesVC: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        // TODO: Make the transition to the questionVC
+        let questionVC = QuestionVC()
+        self.navigationController?.pushViewController(questionVC, animated: true)
     }
 }
 

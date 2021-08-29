@@ -281,12 +281,12 @@ class RegistrationView: UIView {
             self.registrationLabel.topAnchor.constraint(equalTo: self.topView.bottomAnchor, constant: 50),
             self.registrationLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             
-            self.loginButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10),
+            self.loginButton.topAnchor.constraint(equalTo: self.topView.bottomAnchor, constant: -28),
             self.loginButton.widthAnchor.constraint(equalToConstant: 60),
             self.loginButton.heightAnchor.constraint(equalToConstant: 60),
             self.loginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             
-            self.closeButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10),
+            self.closeButton.topAnchor.constraint(equalTo: self.topView.bottomAnchor, constant: -28),
             self.closeButton.widthAnchor.constraint(equalToConstant: 60),
             self.closeButton.heightAnchor.constraint(equalToConstant: 60),
             self.closeButton.trailingAnchor.constraint(equalTo: self.loginButton.leadingAnchor, constant: 0),
@@ -294,7 +294,7 @@ class RegistrationView: UIView {
             self.topView.topAnchor.constraint(equalTo: self.topAnchor),
             self.topView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.topView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            self.topView.heightAnchor.constraint(equalToConstant: 90)
+            self.topView.heightAnchor.constraint(equalToConstant: 70)
         ])
     }
     
