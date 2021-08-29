@@ -19,14 +19,14 @@ class TabBarController: UITabBarController {
         let menuVC = UINavigationController(rootViewController: MenuVC())
         menuVC.title = "Меню"
         
-        //let settingsVC = SettingsVC()
-        //settingsVC.title = "Настройки"
+        let settingsVC = UINavigationController(rootViewController: SettingsVC())
+        settingsVC.title = "Настройки"
         
-        self.setViewControllers([menuVC], animated: true)
+        self.setViewControllers([menuVC, settingsVC], animated: true)
         
         guard let items = self.tabBar.items else { return }
         
-        let images = ["menubar.rectangle"]
+        let images = ["menubar.rectangle", "gear"]
         
         for index in 0 ..< images.count {
             items[index].image = UIImage(systemName: images[index])
