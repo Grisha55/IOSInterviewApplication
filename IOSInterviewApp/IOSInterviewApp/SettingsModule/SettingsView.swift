@@ -30,7 +30,7 @@ class SettingsView: UIView {
     private(set) lazy var stackWithViews: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.alignment = .center
+        stack.alignment = .leading
         stack.distribution = .fillEqually
         stack.spacing = 30
         
@@ -52,7 +52,6 @@ class SettingsView: UIView {
             view.translatesAutoresizingMaskIntoConstraints = false
             
             NSLayoutConstraint.activate([
-                view.widthAnchor.constraint(equalToConstant: 350),
                 view.heightAnchor.constraint(equalToConstant: 70),
                 
                 label.centerYAnchor.constraint(equalTo: view.centerYAnchor),

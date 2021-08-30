@@ -13,6 +13,24 @@ class CategoryCell: UICollectionViewCell {
     
     static let categoryCell = "CategoryCell"
     
+    private(set) lazy var countOfQuestionsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "20 вопросов"
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private(set) lazy var backView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 20
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor.black.cgColor
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private(set) lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 25)
@@ -39,19 +57,29 @@ class CategoryCell: UICollectionViewCell {
     }
     
     private func setupUI() {
-        self.addSubview(nameLabel)
+        self.addSubview(backView)
+        self.backView.addSubview(nameLabel)
+        self.addSubview(countOfQuestionsLabel)
         
         NSLayoutConstraint.activate([
-            self.nameLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.nameLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            self.backView.topAnchor.constraint(equalTo: self.topAnchor),
+            self.backView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.backView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.backView.bottomAnchor.constraint(equalTo: self.countOfQuestionsLabel.topAnchor),
+            
+            self.nameLabel.centerXAnchor.constraint(equalTo: self.backView.centerXAnchor),
+            self.nameLabel.centerYAnchor.constraint(equalTo: self.backView.centerYAnchor),
+            
+            self.countOfQuestionsLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.countOfQuestionsLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
         ])
     }
     
     private func configureSelf() {
         self.backgroundColor = .white
         self.layer.cornerRadius = 20
-        self.layer.borderWidth = 2
-        self.layer.borderColor = UIColor.black.cgColor
+        //self.layer.borderWidth = 2
+        //self.layer.borderColor = UIColor.black.cgColor
     }
     
 }
