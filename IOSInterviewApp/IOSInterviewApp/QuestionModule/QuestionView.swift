@@ -86,7 +86,7 @@ class QuestionView: UIView {
             self.answerTextView.topAnchor.constraint(equalTo: questionTextView.bottomAnchor, constant: 30),
             self.answerTextView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.answerTextView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.answerTextView.heightAnchor.constraint(equalToConstant: 200),
+            self.answerTextView.bottomAnchor.constraint(equalTo: knowButton.topAnchor, constant: -20),
             
             self.questionTextView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
             self.questionTextView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
