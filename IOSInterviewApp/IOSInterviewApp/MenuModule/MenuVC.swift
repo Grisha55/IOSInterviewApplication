@@ -27,6 +27,11 @@ class MenuVC: UIViewController {
 
 extension MenuVC: MenuViewDelegate {
     
+    func resultsButtonAction() {
+        let resultsVC = ResultsVC()
+        self.navigationController?.pushViewController(resultsVC, animated: true)
+    }
+    
     func categoriesButtonAction() {
         let categoriesVC = CategoriesVC()
         self.navigationController?.pushViewController(categoriesVC, animated: true)

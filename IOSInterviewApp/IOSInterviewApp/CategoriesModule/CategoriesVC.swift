@@ -80,7 +80,7 @@ extension CategoriesVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.categoryCell, for: indexPath) as? CategoryCell else { return UICollectionViewCell() }
-        cell.configureCell(name: self.names[indexPath.row])
+        cell.configureCell(name: self.names[indexPath.row], countOfQuestions: 15)
         return cell
     }
 }
