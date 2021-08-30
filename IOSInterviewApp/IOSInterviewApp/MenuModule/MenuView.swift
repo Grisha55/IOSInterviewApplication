@@ -9,6 +9,7 @@ import UIKit
 
 protocol MenuViewDelegate: AnyObject {
     func categoriesButtonAction()
+    func resultsButtonAction()
 }
 
 class MenuView: UIView {
@@ -50,6 +51,7 @@ class MenuView: UIView {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 20
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(resultsButtonDidTapped), for: .touchUpInside)
         return button
     }()
     
@@ -65,6 +67,10 @@ class MenuView: UIView {
     }
     
     // MARK: - Methods
+    
+    @objc private func resultsButtonDidTapped() {
+        self.menuViewDelegate?.resultsButtonAction()
+    }
     
     @objc private func categoriesButtonDidTapped() {
         self.menuViewDelegate?.categoriesButtonAction()

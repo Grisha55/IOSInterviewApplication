@@ -15,7 +15,6 @@ class CategoryCell: UICollectionViewCell {
     
     private(set) lazy var countOfQuestionsLabel: UILabel = {
         let label = UILabel()
-        label.text = "20 вопросов"
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -52,8 +51,9 @@ class CategoryCell: UICollectionViewCell {
     
     // MARK: - Methods
     
-    func configureCell(name: String) {
+    func configureCell(name: String, countOfQuestions: Int) {
         self.nameLabel.text = name
+        self.countOfQuestionsLabel.text = "\(countOfQuestions) вопросов"
     }
     
     private func setupUI() {
@@ -78,8 +78,6 @@ class CategoryCell: UICollectionViewCell {
     private func configureSelf() {
         self.backgroundColor = .white
         self.layer.cornerRadius = 20
-        //self.layer.borderWidth = 2
-        //self.layer.borderColor = UIColor.black.cgColor
     }
     
 }
