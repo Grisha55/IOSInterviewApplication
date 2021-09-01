@@ -9,7 +9,7 @@ import UIKit
 
 protocol RegistrationViewDelegate: AnyObject {
     func closeButtonAction()
-    func registerButtonAction()
+    func registerButtonAction(name: String, email: String, password: String)
 }
 
 class RegistrationView: UIView {
@@ -31,7 +31,11 @@ class RegistrationView: UIView {
     }()
     
     @objc private func registrationButtonDidTapped() {
-        registrationViewDelegate?.registerButtonAction()
+        guard let name = nameTF.text, let email = loginTF.text, let password = passwordTF.text else {
+            // TODO: Make alert
+            return
+        }
+        registrationViewDelegate?.registerButtonAction(name: name, email: email, password: password)
     }
     
     private(set) lazy var passwordStack: UIStackView = {

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LogInViewDelegate: AnyObject {
-    func loginButtonAction()
+    func loginButtonAction(email: String, password: String)
     func closeButtonAction()
 }
 
@@ -64,7 +64,11 @@ class LogInView: UIView {
     }()
     
     @objc private func logInButtonDidTapped() {
-        logInViewDelegate?.loginButtonAction()
+        guard let email = loginTF.text, let password = passwordTF.text else {
+            // TODO: Make alert
+            return
+        }
+        logInViewDelegate?.loginButtonAction(email: email, password: password)
     }
     
     private(set) lazy var passwordStack: UIStackView = {
