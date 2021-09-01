@@ -9,6 +9,10 @@ import UIKit
 
 class RegistrationVC: UIViewController {
     
+    // Properties
+    
+    private let firebaseService = FirebaseService()
+    
     override func loadView() {
         super.loadView()
         
@@ -32,9 +36,17 @@ extension RegistrationVC: RegistrationViewDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func registerButtonAction() {
-        let tabBarC = TabBarController()
-        tabBarC.modalPresentationStyle = .fullScreen
-        self.present(tabBarC, animated: true, completion: nil)
+    func registerButtonAction(name: String, email: String, password: String) {
+        
+        self.firebaseService.register(name: name, email: email, password: password) { (result) in
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(_):
+                let tabBarC = TabBarController()
+                tabBarC.modalPresentationStyle = .fullScreen
+                self.present(tabBarC, animated: true, completion: nil)
+            }
+        }
     }
 }

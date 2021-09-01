@@ -9,6 +9,10 @@ import UIKit
 
 class SettingsVC: UIViewController {
 
+    // MARK: - Properties
+    
+    private let firebaseService = FirebaseService()
+    
     override func loadView() {
         super.loadView()
         let settingsView = SettingsView()
@@ -28,6 +32,7 @@ class SettingsVC: UIViewController {
 extension SettingsVC: SettingsViewDelegate {
     
     func exitButtonAction() {
+        self.firebaseService.logOut()
         let logInVC = LogInVC()
         logInVC.modalPresentationStyle = .fullScreen
         logInVC.modalTransitionStyle = .crossDissolve
