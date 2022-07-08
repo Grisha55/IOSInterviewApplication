@@ -10,6 +10,7 @@
 		31AC75466CF65DB84D0196CE /* Pods_IOSInterviewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E5ADD2E27B229986167853 /* Pods_IOSInterviewApp.framework */; };
 		BE0489ED2878A28700887CD0 /* ResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0489EC2878A28700887CD0 /* ResultsCell.swift */; };
 		BE0489EF2878A56D00887CD0 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0489EE2878A56D00887CD0 /* Results.swift */; };
+		BE0489F12878B02800887CD0 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0489F02878B02800887CD0 /* Questions.swift */; };
 		BE42407926DFA424009A6FC8 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42407826DFA424009A6FC8 /* UserData.swift */; };
 		BE42407C26DFA674009A6FC8 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42407B26DFA674009A6FC8 /* FirebaseService.swift */; };
 		BE9F87A826DF9EBD00743499 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */; };
@@ -37,6 +38,7 @@
 		2087E85B69319CA872C70E6F /* Pods-IOSInterviewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSInterviewApp.release.xcconfig"; path = "Target Support Files/Pods-IOSInterviewApp/Pods-IOSInterviewApp.release.xcconfig"; sourceTree = "<group>"; };
 		BE0489EC2878A28700887CD0 /* ResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCell.swift; sourceTree = "<group>"; };
 		BE0489EE2878A56D00887CD0 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		BE0489F02878B02800887CD0 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		BE42407826DFA424009A6FC8 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		BE42407B26DFA674009A6FC8 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		BEDDCDF326DA1A9A003C1CB3 /* IOSInterviewApp */ = {
 			isa = PBXGroup;
 			children = (
+				BE0489F02878B02800887CD0 /* Questions.swift */,
 				BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */,
 				BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */,
 				BE42407A26DFA646009A6FC8 /* FirebaseService */,
@@ -331,6 +334,7 @@
 				BE42407C26DFA674009A6FC8 /* FirebaseService.swift in Sources */,
 				BEDDCE2326DB7FB2003C1CB3 /* CategoryCell.swift in Sources */,
 				BEDDCE2126DB7AB3003C1CB3 /* CategoriesVC.swift in Sources */,
+				BE0489F12878B02800887CD0 /* Questions.swift in Sources */,
 				BE0489EF2878A56D00887CD0 /* Results.swift in Sources */,
 				BEDDCE2626DBAC4E003C1CB3 /* QuestionVC.swift in Sources */,
 				BEDDCE1226DA56E2003C1CB3 /* LogInView.swift in Sources */,
