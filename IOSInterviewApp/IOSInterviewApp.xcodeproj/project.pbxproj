@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		31AC75466CF65DB84D0196CE /* Pods_IOSInterviewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E5ADD2E27B229986167853 /* Pods_IOSInterviewApp.framework */; };
+		BE0489ED2878A28700887CD0 /* ResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0489EC2878A28700887CD0 /* ResultsCell.swift */; };
+		BE0489EF2878A56D00887CD0 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0489EE2878A56D00887CD0 /* Results.swift */; };
 		BE42407926DFA424009A6FC8 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42407826DFA424009A6FC8 /* UserData.swift */; };
 		BE42407C26DFA674009A6FC8 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42407B26DFA674009A6FC8 /* FirebaseService.swift */; };
 		BE9F87A826DF9EBD00743499 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */; };
@@ -29,11 +31,12 @@
 		BEDDCE2626DBAC4E003C1CB3 /* QuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE2526DBAC4E003C1CB3 /* QuestionVC.swift */; };
 		BEDDCE2826DBAC65003C1CB3 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE2726DBAC65003C1CB3 /* QuestionView.swift */; };
 		BEDDCE2B26DCEF6E003C1CB3 /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE2A26DCEF6E003C1CB3 /* ResultsVC.swift */; };
-		BEDDCE2D26DCEF8C003C1CB3 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE2C26DCEF8C003C1CB3 /* ResultsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2087E85B69319CA872C70E6F /* Pods-IOSInterviewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSInterviewApp.release.xcconfig"; path = "Target Support Files/Pods-IOSInterviewApp/Pods-IOSInterviewApp.release.xcconfig"; sourceTree = "<group>"; };
+		BE0489EC2878A28700887CD0 /* ResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCell.swift; sourceTree = "<group>"; };
+		BE0489EE2878A56D00887CD0 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		BE42407826DFA424009A6FC8 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		BE42407B26DFA674009A6FC8 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -57,7 +60,6 @@
 		BEDDCE2526DBAC4E003C1CB3 /* QuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVC.swift; sourceTree = "<group>"; };
 		BEDDCE2726DBAC65003C1CB3 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		BEDDCE2A26DCEF6E003C1CB3 /* ResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsVC.swift; sourceTree = "<group>"; };
-		BEDDCE2C26DCEF8C003C1CB3 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		C6239E7D12789DF75E79422B /* Pods-IOSInterviewApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSInterviewApp.debug.xcconfig"; path = "Target Support Files/Pods-IOSInterviewApp/Pods-IOSInterviewApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D9E5ADD2E27B229986167853 /* Pods_IOSInterviewApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSInterviewApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -206,7 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				BEDDCE2A26DCEF6E003C1CB3 /* ResultsVC.swift */,
-				BEDDCE2C26DCEF8C003C1CB3 /* ResultsView.swift */,
+				BE0489EC2878A28700887CD0 /* ResultsCell.swift */,
+				BE0489EE2878A56D00887CD0 /* Results.swift */,
 			);
 			path = ResultsModule;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				BE42407C26DFA674009A6FC8 /* FirebaseService.swift in Sources */,
 				BEDDCE2326DB7FB2003C1CB3 /* CategoryCell.swift in Sources */,
 				BEDDCE2126DB7AB3003C1CB3 /* CategoriesVC.swift in Sources */,
+				BE0489EF2878A56D00887CD0 /* Results.swift in Sources */,
 				BEDDCE2626DBAC4E003C1CB3 /* QuestionVC.swift in Sources */,
 				BEDDCE1226DA56E2003C1CB3 /* LogInView.swift in Sources */,
 				BEDDCE1726DAA71B003C1CB3 /* MenuView.swift in Sources */,
@@ -339,10 +343,10 @@
 				BEDDCDF726DA1A9A003C1CB3 /* SceneDelegate.swift in Sources */,
 				BEDDCE2826DBAC65003C1CB3 /* QuestionView.swift in Sources */,
 				BE42407926DFA424009A6FC8 /* UserData.swift in Sources */,
+				BE0489ED2878A28700887CD0 /* ResultsCell.swift in Sources */,
 				BEDDCE0B26DA22FE003C1CB3 /* RegistrationView.swift in Sources */,
 				BEDDCE1026DA56D6003C1CB3 /* LogInVC.swift in Sources */,
 				BEDDCE1C26DB6895003C1CB3 /* SettingsVC.swift in Sources */,
-				BEDDCE2D26DCEF8C003C1CB3 /* ResultsView.swift in Sources */,
 				BEDDCE1E26DB68C5003C1CB3 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
