@@ -11,8 +11,7 @@ import Firebase
 class LogInVC: UIViewController {
 
     // MARK: - Properties
-    
-    private let firebaseService = FirebaseService()
+    private var loginPresenter: LoginPresenterProtocol!
     
     override func loadView() {
         super.loadView()
@@ -24,6 +23,9 @@ class LogInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Это будет перенесено в Assembly
+        loginPresenter = LoginPresenter()
+        
     }
     
 
@@ -32,14 +34,17 @@ class LogInVC: UIViewController {
 extension LogInVC: LogInViewDelegate {
     
     func loginButtonAction(email: String, password: String) {
-        self.firebaseService.login(email: email, password: password) { (result) in
+        loginPresenter.loginButtonAction(email: email, password: password) { (result) in
             switch result {
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             case .success(_):
-                let tabBarC = TabBarController()
-                tabBarC.modalPresentationStyle = .fullScreen
-                self.present(tabBarC, animated: true, completion: nil)
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    let tabBarC = TabBarController()
+                    tabBarC.modalPresentationStyle = .fullScreen
+                    self.present(tabBarC, animated: true, completion: nil)
+                }
             }
         }
     }

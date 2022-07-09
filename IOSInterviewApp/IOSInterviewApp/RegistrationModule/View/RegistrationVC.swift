@@ -10,8 +10,7 @@ import UIKit
 class RegistrationVC: UIViewController {
     
     // Properties
-    
-    private let firebaseService = FirebaseService()
+    var registrationPresenter: RegistrationPresenterProtocol!
     
     override func loadView() {
         super.loadView()
@@ -25,6 +24,9 @@ class RegistrationVC: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        
+        // Перенести данный код в Assembly
+        registrationPresenter = RegistrationPresenter()
     }
 
 
@@ -38,15 +40,6 @@ extension RegistrationVC: RegistrationViewDelegate {
     
     func registerButtonAction(name: String, email: String, password: String) {
         
-        self.firebaseService.register(name: name, email: email, password: password) { (result) in
-            switch result {
-            case .failure(let error):
-                print(error)
-            case .success(_):
-                let tabBarC = TabBarController()
-                tabBarC.modalPresentationStyle = .fullScreen
-                self.present(tabBarC, animated: true, completion: nil)
-            }
-        }
+        registrationPresenter.registerUser(name: name, email: email, password: password)
     }
 }
