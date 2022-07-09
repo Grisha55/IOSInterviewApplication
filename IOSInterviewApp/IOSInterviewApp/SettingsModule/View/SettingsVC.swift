@@ -11,7 +11,7 @@ class SettingsVC: UIViewController {
 
     // MARK: - Properties
     
-    private let firebaseService = FirebaseService()
+    private var settingsPresenter: SettingsPresenterProtocol!
     
     override func loadView() {
         super.loadView()
@@ -25,6 +25,9 @@ class SettingsVC: UIViewController {
 
         title = "Настройки"
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+        // Это будет перенесено в Assembly
+        settingsPresenter = SettingsPresenter()
     }
     
 }
@@ -32,7 +35,7 @@ class SettingsVC: UIViewController {
 extension SettingsVC: SettingsViewDelegate {
     
     func exitButtonAction() {
-        self.firebaseService.logOut()
+        self.settingsPresenter.logOut()
         let logInVC = LogInVC()
         logInVC.modalPresentationStyle = .fullScreen
         logInVC.modalTransitionStyle = .crossDissolve
