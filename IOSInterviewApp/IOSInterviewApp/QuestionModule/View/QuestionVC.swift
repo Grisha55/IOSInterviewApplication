@@ -22,6 +22,7 @@ class QuestionVC: UIViewController {
 
         title = "Вопросы"
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        print(questionPresenter.questionType)
     }
     
 

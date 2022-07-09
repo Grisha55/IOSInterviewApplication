@@ -9,12 +9,14 @@ import Foundation
 
 protocol RegistrationPresenterProtocol: AnyObject {
     func registerUser(name: String, email: String, password: String)
+    func closeButtonTapped()
 }
 
 class RegistrationPresenter: RegistrationPresenterProtocol {
     
     var firebaseService: FirebaseServiceProtocol!
     var view = RegistrationVC()
+    var router: RouterProtocol!
     
     func registerUser(name: String, email: String, password: String) {
         
@@ -24,12 +26,13 @@ class RegistrationPresenter: RegistrationPresenterProtocol {
             case .failure(let error):
                 print(error)
             case .success(_):
-                let tabBarC = TabBarController()
-                tabBarC.modalPresentationStyle = .fullScreen
-                self.view.present(tabBarC, animated: true, completion: nil)
+                self.router.menuViewController()
             }
         }
-        
+    }
+    
+    func closeButtonTapped() {
+        self.router.popToRoot()
     }
     
 }
