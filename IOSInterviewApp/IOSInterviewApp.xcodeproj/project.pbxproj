@@ -17,6 +17,8 @@
 		BE7D982228797A2D00A50F4D /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D982128797A2D00A50F4D /* RegistrationPresenter.swift */; };
 		BE7D982728798C9D00A50F4D /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D982628798C9D00A50F4D /* SettingsPresenter.swift */; };
 		BE7D982F287994AA00A50F4D /* QuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D982E287994AA00A50F4D /* QuestionPresenter.swift */; };
+		BE7D98332879A14A00A50F4D /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D98322879A14A00A50F4D /* AssemblyBuilder.swift */; };
+		BE7D98362879AB0600A50F4D /* ResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D98352879AB0600A50F4D /* ResultsPresenter.swift */; };
 		BE9F87A826DF9EBD00743499 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */; };
 		BEDDCDF526DA1A9A003C1CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */; };
 		BEDDCDF726DA1A9A003C1CB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */; };
@@ -49,6 +51,8 @@
 		BE7D982128797A2D00A50F4D /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		BE7D982628798C9D00A50F4D /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		BE7D982E287994AA00A50F4D /* QuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenter.swift; sourceTree = "<group>"; };
+		BE7D98322879A14A00A50F4D /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
+		BE7D98352879AB0600A50F4D /* ResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPresenter.swift; sourceTree = "<group>"; };
 		BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BEDDCDF126DA1A9A003C1CB3 /* IOSInterviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSInterviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +226,22 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		BE7D98312879A13800A50F4D /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				BE7D98322879A14A00A50F4D /* AssemblyBuilder.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		BE7D98342879AAE700A50F4D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BE7D98352879AB0600A50F4D /* ResultsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		BEDDCDE826DA1A9A003C1CB3 = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +263,7 @@
 		BEDDCDF326DA1A9A003C1CB3 /* IOSInterviewApp */ = {
 			isa = PBXGroup;
 			children = (
+				BE7D98312879A13800A50F4D /* Assembly */,
 				BE0489F02878B02800887CD0 /* Questions.swift */,
 				BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */,
 				BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */,
@@ -319,8 +340,9 @@
 		BEDDCE2926DCEF53003C1CB3 /* ResultsModule */ = {
 			isa = PBXGroup;
 			children = (
-				BE7D98282879944200A50F4D /* View */,
 				BE7D98292879944A00A50F4D /* Model */,
+				BE7D98282879944200A50F4D /* View */,
+				BE7D98342879AAE700A50F4D /* Presenter */,
 			);
 			path = ResultsModule;
 			sourceTree = "<group>";
@@ -440,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE42407C26DFA674009A6FC8 /* FirebaseService.swift in Sources */,
+				BE7D98332879A14A00A50F4D /* AssemblyBuilder.swift in Sources */,
 				BE7D982F287994AA00A50F4D /* QuestionPresenter.swift in Sources */,
 				BEDDCE2326DB7FB2003C1CB3 /* CategoryCell.swift in Sources */,
 				BEDDCE2126DB7AB3003C1CB3 /* CategoriesVC.swift in Sources */,
@@ -450,6 +473,7 @@
 				BEDDCE2626DBAC4E003C1CB3 /* QuestionVC.swift in Sources */,
 				BEDDCE1226DA56E2003C1CB3 /* LogInView.swift in Sources */,
 				BEDDCE1726DAA71B003C1CB3 /* MenuView.swift in Sources */,
+				BE7D98362879AB0600A50F4D /* ResultsPresenter.swift in Sources */,
 				BEDDCE2B26DCEF6E003C1CB3 /* ResultsVC.swift in Sources */,
 				BE7D982728798C9D00A50F4D /* SettingsPresenter.swift in Sources */,
 				BEDDCDF926DA1A9A003C1CB3 /* RegistrationVC.swift in Sources */,

@@ -9,9 +9,11 @@ import UIKit
 
 class QuestionVC: UIViewController {
 
+    var questionView: QuestionView!
+    var questionPresenter: QuestionPresenterProtocol!
+    
     override func loadView() {
         super.loadView()
-        let questionView = QuestionView()
         self.view = questionView
     }
     

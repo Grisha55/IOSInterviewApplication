@@ -13,9 +13,8 @@ protocol SettingsPresenterProtocol: AnyObject {
 
 class SettingsPresenter: SettingsPresenterProtocol {
     
-    // Слабая ссылка на вьюху
-    let view = SettingsVC()
-    let firebaseService = FirebaseService()
+    private let view = SettingsVC()
+    var firebaseService: FirebaseServiceProtocol!
     
     func logOut() {
         firebaseService.logOut()

@@ -9,8 +9,7 @@ import UIKit
 
 class ResultsVC: UIViewController {
 
-    private let results = [Results(moduleName: "UI", procents: 80),
-                           Results(moduleName: "Network", procents: 10)]
+    var resultsPresenter: ResultsPresenterProtocol!
     
     lazy var resultTableView: UITableView = {
         let table = UITableView()
@@ -61,12 +60,12 @@ extension ResultsVC: UITableViewDelegate {
 extension ResultsVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return results.count
+        return resultsPresenter.results.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ResultsCell.self), for: indexPath) as? ResultsCell else { return UITableViewCell() }
-        cell.results = results[indexPath.row]
+        cell.results = resultsPresenter.results[indexPath.row]
         return cell
     }
 }

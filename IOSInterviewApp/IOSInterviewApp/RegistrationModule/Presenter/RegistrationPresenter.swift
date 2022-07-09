@@ -13,8 +13,7 @@ protocol RegistrationPresenterProtocol: AnyObject {
 
 class RegistrationPresenter: RegistrationPresenterProtocol {
     
-    // Переписать с протоколом
-    var firebaseService = FirebaseService()
+    var firebaseService: FirebaseServiceProtocol!
     var view = RegistrationVC()
     
     func registerUser(name: String, email: String, password: String) {
