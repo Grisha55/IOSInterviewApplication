@@ -10,7 +10,14 @@ import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-class FirebaseService {
+protocol FirebaseServiceProtocol: AnyObject {
+    func register(name: String, email: String, password: String, completion: @escaping (Result<UserData, Error>) -> Void)
+    func logOut()
+    func isAuthorized() -> Bool
+    func login(email: String, password: String, completion: @escaping (Result<UserData, Error>) -> Void)
+}
+
+class FirebaseService: FirebaseServiceProtocol {
     
     // MARK: - Registration
     

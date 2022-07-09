@@ -10,6 +10,7 @@ import UIKit
 protocol RegistrationViewDelegate: AnyObject {
     func closeButtonAction()
     func registerButtonAction(name: String, email: String, password: String)
+    func topViewDidTapped()
 }
 
 class RegistrationView: UIView {
@@ -222,9 +223,18 @@ class RegistrationView: UIView {
     private(set) lazy var topView: UIView = {
         let topView = UIView()
         topView.backgroundColor = .purple
+        topView.isUserInteractionEnabled = true
+        topView.clipsToBounds = false
+        
+        topView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(topViewDidTapped)))
         topView.translatesAutoresizingMaskIntoConstraints = false
         return topView
     }()
+    
+    @objc func topViewDidTapped() {
+        print("It worked!!!")
+        registrationViewDelegate?.topViewDidTapped()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
