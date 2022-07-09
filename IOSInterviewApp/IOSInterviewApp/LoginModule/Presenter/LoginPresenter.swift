@@ -16,8 +16,7 @@ class LoginPresenter: LoginPresenterProtocol {
     // Слабая ссылка на вьюху
     private var view = LogInVC()
     
-    // Добавить протокол для сервера
-    private let firebaseService = FirebaseService()
+    var firebaseService: FirebaseServiceProtocol!
     
     func loginButtonAction(email: String, password: String, completion: @escaping (Result<UserData, Error>) -> Void) {
         self.firebaseService.login(email: email, password: password) { (result) in

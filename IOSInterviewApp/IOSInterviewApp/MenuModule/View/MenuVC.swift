@@ -9,9 +9,10 @@ import UIKit
 
 class MenuVC: UIViewController {
 
+    var menuView: MenuView!
+    
     override func loadView() {
         super.loadView()
-        let menuView = MenuView()
         self.view = menuView
         menuView.menuViewDelegate = self
     }

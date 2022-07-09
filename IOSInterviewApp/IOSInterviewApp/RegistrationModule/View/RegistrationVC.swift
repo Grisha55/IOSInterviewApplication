@@ -11,11 +11,10 @@ class RegistrationVC: UIViewController {
     
     // Properties
     var registrationPresenter: RegistrationPresenterProtocol!
+    var registrationView: RegistrationView!
     
     override func loadView() {
         super.loadView()
-        
-        let registrationView = RegistrationView()
         self.view = registrationView
         registrationView.registrationViewDelegate = self
     }
@@ -24,9 +23,6 @@ class RegistrationVC: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        
-        // Перенести данный код в Assembly
-        registrationPresenter = RegistrationPresenter()
     }
 
 

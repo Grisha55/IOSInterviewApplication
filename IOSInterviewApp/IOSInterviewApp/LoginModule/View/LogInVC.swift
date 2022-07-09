@@ -11,20 +11,17 @@ import Firebase
 class LogInVC: UIViewController {
 
     // MARK: - Properties
-    private var loginPresenter: LoginPresenterProtocol!
+    var loginPresenter: LoginPresenterProtocol!
+    var logInView: LogInView!
     
     override func loadView() {
         super.loadView()
-        let logInView = LogInView()
         self.view = logInView
         logInView.logInViewDelegate = self
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Это будет перенесено в Assembly
-        loginPresenter = LoginPresenter()
         
     }
     
