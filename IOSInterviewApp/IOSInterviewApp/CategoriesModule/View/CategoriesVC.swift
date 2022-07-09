@@ -11,7 +11,7 @@ class CategoriesVC: UIViewController {
 
     // MARK: - Properties
     
-    private let names = ["Swift", "Network", "Multithrading", "UI", "Database", "Patterns"]
+    var categoriesPresenter: CategoriesPresenterProtocol!
     
     private(set) lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -52,8 +52,7 @@ extension CategoriesVC: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        let questionVC = QuestionVC()
-        self.navigationController?.pushViewController(questionVC, animated: true)
+        self.categoriesPresenter.transiteModuleName(indexPath: indexPath)
     }
 }
 
@@ -75,12 +74,12 @@ extension CategoriesVC: UICollectionViewDelegateFlowLayout {
 extension CategoriesVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.names.count
+        return self.categoriesPresenter.names.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.categoryCell, for: indexPath) as? CategoryCell else { return UICollectionViewCell() }
-        cell.configureCell(name: self.names[indexPath.row], countOfQuestions: 15)
+        cell.configureCell(name: self.categoriesPresenter.names[indexPath.row], countOfQuestions: 15)
         return cell
     }
 }

@@ -23,6 +23,7 @@ class RegistrationVC: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
 
 
@@ -30,8 +31,12 @@ class RegistrationVC: UIViewController {
 
 extension RegistrationVC: RegistrationViewDelegate {
     
+    func topViewDidTapped() {
+        self.registrationPresenter.closeButtonTapped()
+    }
+    
     func closeButtonAction() {
-        self.dismiss(animated: true, completion: nil)
+        self.registrationPresenter.closeButtonTapped()
     }
     
     func registerButtonAction(name: String, email: String, password: String) {

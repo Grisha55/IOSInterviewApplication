@@ -9,13 +9,18 @@ import Foundation
 import UIKit
 
 protocol AssemblyBuilderProtocol: AnyObject {
-    
-    
+    func createResultsModule(router: RouterProtocol) -> UIViewController
+    func createQuestionsModule(questionsType: QuestionsType, router: RouterProtocol) -> UIViewController
+    func createCategoriesModule(router: RouterProtocol) -> UIViewController
+    func createSettingsModule(router: RouterProtocol) -> UIViewController
+    func createMenuModule(router: RouterProtocol) -> UIViewController
+    func createRegistrationModule(router: RouterProtocol) -> UIViewController
+    func createLoginModule(router: RouterProtocol) -> UIViewController
 }
 
 class AssemblyBuilder: AssemblyBuilderProtocol {
     
-    func createResultsModule() -> UIViewController {
+    func createResultsModule(router: RouterProtocol) -> UIViewController {
         
         let vc = ResultsVC()
         let resultsPresenter = ResultsPresenter()
@@ -25,7 +30,7 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         return vc
     }
     
-    func createQuestionsModule() -> UIViewController {
+    func createQuestionsModule(questionsType: QuestionsType, router: RouterProtocol) -> UIViewController {
         
         let vc = QuestionVC()
         let questionView = QuestionView()
@@ -33,18 +38,23 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         
         vc.questionView = questionView
         vc.questionPresenter = questionPresenter
+        questionPresenter.questionType = questionsType
         
         return vc
     }
     
-    func createCategoriesModule() -> UIViewController {
+    func createCategoriesModule(router: RouterProtocol) -> UIViewController {
         
         let vc = CategoriesVC()
+        let categoriesPresenter = CategoriesPresenter()
+        
+        vc.categoriesPresenter = categoriesPresenter
+        categoriesPresenter.router = router
         
         return vc
     }
     
-    func createSettingsModule() -> UIViewController {
+    func createSettingsModule(router: RouterProtocol) -> UIViewController {
         
         let vc = SettingsVC()
         let settingsView = SettingsView()
@@ -58,17 +68,20 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         return vc
     }
     
-    func createMenuModule() -> UIViewController {
+    func createMenuModule(router: RouterProtocol) -> UIViewController {
         
         let vc = MenuVC()
         let menuView = MenuView()
+        let menuPresenter = MenuPresenter()
         
         vc.menuView = menuView
+        vc.menuPresenter = menuPresenter
+        menuPresenter.router = router
         
         return vc
     }
     
-    func createRegistrationModule() -> UIViewController {
+    func createRegistrationModule(router: RouterProtocol) -> UIViewController {
         
         let vc = RegistrationVC()
         let registrationView = RegistrationView()
@@ -78,11 +91,12 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         vc.registrationView = registrationView
         vc.registrationPresenter = registrationPresenter
         registrationPresenter.firebaseService = firebaseService
+        registrationPresenter.router = router
         
         return vc
     }
     
-    func createLoginModule() -> UIViewController {
+    func createLoginModule(router: RouterProtocol) -> UIViewController {
         
         let vc = LogInVC()
         let loginView = LogInView()
@@ -92,6 +106,7 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         vc.logInView = loginView
         vc.loginPresenter = loginPresenter
         loginPresenter.firebaseService = firebaseService
+        loginPresenter.router = router
         
         return vc
     }

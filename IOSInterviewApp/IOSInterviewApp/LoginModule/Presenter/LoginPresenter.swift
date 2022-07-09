@@ -8,25 +8,31 @@
 import Foundation
 
 protocol LoginPresenterProtocol: AnyObject {
-    func loginButtonAction(email: String, password: String, completion: @escaping (Result<UserData, Error>) -> Void)
+    func loginButtonAction(email: String, password: String)
+    func closeButtonTapped()
 }
 
 class LoginPresenter: LoginPresenterProtocol {
     
-    // Слабая ссылка на вьюху
     private var view = LogInVC()
     
     var firebaseService: FirebaseServiceProtocol!
+    var router: RouterProtocol!
     
-    func loginButtonAction(email: String, password: String, completion: @escaping (Result<UserData, Error>) -> Void) {
-        self.firebaseService.login(email: email, password: password) { (result) in
+    func loginButtonAction(email: String, password: String) {
+        self.firebaseService.login(email: email, password: password) { [weak self] (result) in
+            guard let self = self else { return }
             switch result {
             case .failure(let error):
-                completion(.failure(error))
-            case .success(let results):
-                completion(.success(results))
+                print(error.localizedDescription)
+            case .success(_):
+                self.router.menuViewController()
             }
         }
+    }
+    
+    func closeButtonTapped() {
+        router.registrationViewController()
     }
     
 }

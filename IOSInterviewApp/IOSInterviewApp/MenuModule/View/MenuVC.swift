@@ -10,6 +10,7 @@ import UIKit
 class MenuVC: UIViewController {
 
     var menuView: MenuView!
+    var menuPresenter: MenuPresenterProtocol!
     
     override func loadView() {
         super.loadView()
@@ -29,12 +30,10 @@ class MenuVC: UIViewController {
 extension MenuVC: MenuViewDelegate {
     
     func resultsButtonAction() {
-        let resultsVC = ResultsVC()
-        self.navigationController?.pushViewController(resultsVC, animated: true)
+        self.menuPresenter.resultsButtonTapped()
     }
     
     func categoriesButtonAction() {
-        let categoriesVC = CategoriesVC()
-        self.navigationController?.pushViewController(categoriesVC, animated: true)
+        self.menuPresenter.categoriesButtonTapped()
     }
 }
