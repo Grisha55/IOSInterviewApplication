@@ -78,8 +78,13 @@ extension CategoriesVC: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.categoryCell, for: indexPath) as? CategoryCell else { return UICollectionViewCell() }
-        cell.configureCell(name: self.categoriesPresenter.names[indexPath.row], countOfQuestions: 15)
+        
+        let name = self.categoriesPresenter.names[indexPath.row]
+        let countOfQuestions = self.categoriesPresenter.countOfQuestions(name: name)
+        
+        cell.configureCell(name: name, countOfQuestions: countOfQuestions)
         return cell
     }
 }

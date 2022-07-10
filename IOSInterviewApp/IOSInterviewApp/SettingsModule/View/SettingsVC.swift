@@ -32,9 +32,5 @@ extension SettingsVC: SettingsViewDelegate {
     
     func exitButtonAction() {
         self.settingsPresenter.logOut()
-        let logInVC = LogInVC()
-        logInVC.modalPresentationStyle = .fullScreen
-        logInVC.modalTransitionStyle = .crossDissolve
-        self.present(logInVC, animated: true, completion: nil)
     }
 }
