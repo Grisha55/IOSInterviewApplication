@@ -10,6 +10,7 @@ import Foundation
 protocol LoginPresenterProtocol: AnyObject {
     func loginButtonAction(email: String, password: String)
     func closeButtonTapped()
+    func skipingAuthIfUserIs()
 }
 
 class LoginPresenter: LoginPresenterProtocol {
@@ -18,6 +19,14 @@ class LoginPresenter: LoginPresenterProtocol {
     
     var firebaseService: FirebaseServiceProtocol!
     var router: RouterProtocol!
+    
+    func skipingAuthIfUserIs() {
+        if firebaseService.isAuthorized() {
+            self.router.menuViewController()
+        } else {
+            return
+        }
+    }
     
     func loginButtonAction(email: String, password: String) {
         self.firebaseService.login(email: email, password: password) { [weak self] (result) in
