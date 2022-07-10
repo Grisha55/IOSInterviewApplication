@@ -16,7 +16,11 @@ enum QuestionsType: String {
     case patterns
 }
 
-class Questions {
+protocol QuestionsProtocol: AnyObject {
+    func chooseQuestionsType(of type: QuestionsType) -> [String : String]
+}
+
+class Questions: QuestionsProtocol {
     
     func chooseQuestionsType(of type: QuestionsType) -> [String : String] {
         switch type {

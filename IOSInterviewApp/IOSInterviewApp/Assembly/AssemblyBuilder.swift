@@ -48,9 +48,11 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         
         let vc = CategoriesVC()
         let categoriesPresenter = CategoriesPresenter()
+        let questions = Questions()
         
         vc.categoriesPresenter = categoriesPresenter
         categoriesPresenter.router = router
+        categoriesPresenter.questions = questions
         
         return vc
     }
