@@ -80,7 +80,7 @@ class Router: RouterProtocol {
     
     func popToRoot() {
         if let navigationController = navigationController {
-            navigationController.popViewController(animated: true)
+            navigationController.popToRootViewController(animated: true)
         }
     }
     
