@@ -36,10 +36,13 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         let vc = QuestionVC()
         let questionView = QuestionView()
         let questionPresenter = QuestionPresenter()
+        let questions = Questions()
         
         vc.questionView = questionView
         vc.questionPresenter = questionPresenter
+        questionPresenter.questions = questions
         questionPresenter.questionType = questionsType
+        questionPresenter.questionView = questionView
         
         return vc
     }
