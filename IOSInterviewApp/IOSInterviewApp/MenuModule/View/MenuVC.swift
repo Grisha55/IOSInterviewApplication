@@ -23,6 +23,7 @@ class MenuVC: UIViewController {
 
         self.title = "Меню"
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
 
 }

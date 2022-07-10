@@ -18,6 +18,7 @@ class LogInVC: UIViewController {
         super.loadView()
         self.view = logInView
         logInView.logInViewDelegate = self
+        loginPresenter.skipingAuthIfUserIs()
     }
     
     override func viewDidLoad() {

@@ -15,7 +15,7 @@ protocol CategoriesPresenterProtocol: AnyObject {
 class CategoriesPresenter: CategoriesPresenterProtocol {
     
     var router: RouterProtocol!
-    let names = ["swift", "network", "multithrading", "ui", "database", "patterns"]
+    let names = ["swift", "network", "multithrading", "ui", "dataBase", "patterns"]
     
     func transiteModuleName(indexPath: IndexPath) {
         let category = names[indexPath.row]
