@@ -15,9 +15,11 @@ class SettingsPresenter: SettingsPresenterProtocol {
     
     private let view = SettingsVC()
     var firebaseService: FirebaseServiceProtocol!
+    var router: RouterProtocol!
     
     func logOut() {
         firebaseService.logOut()
+        router.popToRoot()
     }
     
 }

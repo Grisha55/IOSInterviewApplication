@@ -19,14 +19,24 @@ class ResultsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigationController()
+    }
+    
+    // MARK: - Methods
+    
+    private func setupNavigationController() {
         title = "Результаты"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        
+        let settingsButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(settingsButtonDidTapped))
+        self.navigationItem.rightBarButtonItem = settingsButton
         configureResultTableView()
         setResultTableViewConstraints()
     }
     
-    // MARK: - Methods
+    @objc
+    func settingsButtonDidTapped() {
+        self.resultsPresenter.settingsButtonDidTapped()
+    }
     
     private func configureResultTableView() {
         view.addSubview(resultTableView)

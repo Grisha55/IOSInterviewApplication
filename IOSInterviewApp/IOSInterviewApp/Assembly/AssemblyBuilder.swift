@@ -26,6 +26,7 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         let resultsPresenter = ResultsPresenter()
         
         vc.resultsPresenter = resultsPresenter
+        resultsPresenter.router = router
         
         return vc
     }
@@ -64,6 +65,7 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         vc.settingsView = settingsView
         vc.settingsPresenter = settingsPresenter
         settingsPresenter.firebaseService = firebaseService
+        settingsPresenter.router = router
         
         return vc
     }
