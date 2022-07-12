@@ -31,14 +31,6 @@ class ResultsCell: UITableViewCell {
         return stack
     }()
     
-    var results: Results? {
-        didSet {
-            guard let results = results else { return }
-            self.moduleLabel.text = results.moduleName
-            self.procentLabel.text = "\(results.procents)%"
-        }
-    }
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -54,6 +46,11 @@ class ResultsCell: UITableViewCell {
     }
     
     // MARK: - Methods
+    
+    func configureResultsCell(module: String, procent: Int) {
+        self.moduleLabel.text = module
+        self.procentLabel.text = "\(procent)%"
+    }
     
     private func setStackWithLabelsConstraints() {
         stackWithLabels.translatesAutoresizingMaskIntoConstraints = false

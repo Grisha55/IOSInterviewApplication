@@ -27,6 +27,8 @@ class QuestionPresenter: QuestionPresenterProtocol {
     }
     var questionView: QuestionView!
     var numberOfQuestions = 1
+    var trueAnswers = 0.0
+    var falseAnswers = 0.1
     
     func unhideAnswerButton() {
         self.questionView.answerTextView.isHidden = false
@@ -34,8 +36,10 @@ class QuestionPresenter: QuestionPresenterProtocol {
     
     func unKnowButtonAction() {
         questionView.answerTextView.isHidden = true
+        
         guard let dict = self.questionsDict, numberOfQuestions < dict.count else {
-            numberOfQuestions = 0
+            questionView.answerTextView.text = "Вы закончили данный раздел"
+            questionView.questionTextView.text = "Вы закончили данный раздел"
             return
         }
         
@@ -46,12 +50,16 @@ class QuestionPresenter: QuestionPresenterProtocol {
         self.questionView.answerTextView.text = newAnswer
         
         numberOfQuestions += 1
+        falseAnswers += 1
+        
     }
     
     func knowButtonAction() {
         questionView.answerTextView.isHidden = true
+        
         guard let dict = self.questionsDict, numberOfQuestions < dict.count else {
-            numberOfQuestions = 0
+            questionView.answerTextView.text = "Вы закончили данный раздел"
+            questionView.questionTextView.text = "Вы закончили данный раздел"
             return
         }
         
@@ -61,9 +69,19 @@ class QuestionPresenter: QuestionPresenterProtocol {
         self.questionView.questionTextView.text = newQuestion
         self.questionView.answerTextView.text = newAnswer
         
-        self.questionsDict?.removeValue(forKey: newQuestion)
+        //self.questionsDict?.removeValue(forKey: newQuestion)
         
-        numberOfQuestions += 0
+        numberOfQuestions += 1
+        trueAnswers += 1
+        
+        
+        let result = Int(trueAnswers * 100 / Double(numberOfQuestions))
+        
+        guard let questionType = questionType else { return }
+        
+        AnswerResults.shared.answersResults.updateValue(result, forKey: questionType.rawValue)
+        
+        
     }
     
 }

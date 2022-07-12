@@ -8,15 +8,14 @@
 import Foundation
 
 protocol ResultsPresenterProtocol: AnyObject {
-    var results: [Results] { get }
+    var results: [String : Int] { get }
     func settingsButtonDidTapped()
 }
 
 class ResultsPresenter: ResultsPresenterProtocol {
     
     var router: RouterProtocol!
-    var results = [Results(moduleName: "UI", procents: 80),
-                           Results(moduleName: "Network", procents: 10)]
+    var results = AnswerResults.shared.answersResults
     
     func settingsButtonDidTapped() {
         self.router.settingsViewController()
