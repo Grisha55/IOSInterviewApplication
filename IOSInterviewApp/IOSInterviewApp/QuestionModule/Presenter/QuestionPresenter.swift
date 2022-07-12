@@ -27,6 +27,8 @@ class QuestionPresenter: QuestionPresenterProtocol {
     }
     var questionView: QuestionView!
     var numberOfQuestions = 1
+    var trueAnswers = 0
+    var falseAnswers = 0
     
     func unhideAnswerButton() {
         self.questionView.answerTextView.isHidden = false
@@ -34,8 +36,14 @@ class QuestionPresenter: QuestionPresenterProtocol {
     
     func unKnowButtonAction() {
         questionView.answerTextView.isHidden = true
-        guard let dict = self.questionsDict, numberOfQuestions < dict.count else {
+        
+        if numberOfQuestions == questionsDict?.count ?? 7 - 1 {
             numberOfQuestions = 0
+        }
+        
+        guard let dict = self.questionsDict, numberOfQuestions < dict.count else {
+            questionView.answerTextView.text = "Вы закончили данный раздел"
+            questionView.questionTextView.text = "Вы закончили данный раздел"
             return
         }
         
@@ -46,12 +54,23 @@ class QuestionPresenter: QuestionPresenterProtocol {
         self.questionView.answerTextView.text = newAnswer
         
         numberOfQuestions += 1
+        falseAnswers += 1
+        guard let questionType = questionType else { return }
+        let result = 7 / numberOfQuestions * 100
+
+        AnswerResults.shared.answersResults.updateValue(result, forKey: questionType.rawValue)
     }
     
     func knowButtonAction() {
         questionView.answerTextView.isHidden = true
-        guard let dict = self.questionsDict, numberOfQuestions < dict.count else {
+        
+        if numberOfQuestions == questionsDict?.count ?? 7 - 1 {
             numberOfQuestions = 0
+        }
+        
+        guard let dict = self.questionsDict, numberOfQuestions < dict.count else {
+            questionView.answerTextView.text = "Вы закончили данный раздел"
+            questionView.questionTextView.text = "Вы закончили данный раздел"
             return
         }
         
@@ -64,6 +83,7 @@ class QuestionPresenter: QuestionPresenterProtocol {
         self.questionsDict?.removeValue(forKey: newQuestion)
         
         numberOfQuestions += 0
+        trueAnswers += 1
     }
     
 }
