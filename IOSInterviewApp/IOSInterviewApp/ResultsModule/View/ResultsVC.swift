@@ -75,7 +75,10 @@ extension ResultsVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ResultsCell.self), for: indexPath) as? ResultsCell else { return UITableViewCell() }
-        cell.results = resultsPresenter.results[indexPath.row]
+        
+        let module = Array(resultsPresenter.results.keys)[indexPath.row]
+        let procent = Array(resultsPresenter.results.values)[indexPath.row]
+        cell.configureResultsCell(module: module, procent: procent)
         return cell
     }
 }
