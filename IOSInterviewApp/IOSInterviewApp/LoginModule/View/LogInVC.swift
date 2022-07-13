@@ -6,11 +6,13 @@
 //
 
 import UIKit
-import Firebase
+import RxSwift
+import RxCocoa
 
 class LogInVC: UIViewController {
 
     // MARK: - Properties
+    let disposeBag = DisposeBag()
     var loginPresenter: LoginPresenterProtocol!
     var logInView: LogInView!
     
@@ -24,8 +26,18 @@ class LogInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bindingForFields()
     }
     
+    private func bindingForFields() {
+        logInView.loginTF.rx.text.map { $0 ?? "" }.bind(to: loginPresenter.loginTextPublishSubject).disposed(by: disposeBag)
+        
+        logInView.passwordTF.rx.text.map { $0 ?? "" }.bind(to: loginPresenter.passwordTextPublishSubject).disposed(by: disposeBag)
+        
+        loginPresenter.isValid().bind(to: logInView.loginButton.rx.isEnabled).disposed(by: disposeBag)
+        
+        loginPresenter.isValid().map { $0 ? 1 : 0.1 }.bind(to: logInView.loginButton.rx.alpha).disposed(by: disposeBag)
+    }
     
 }
 
