@@ -106,12 +106,10 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
     func createLoginModule(router: RouterProtocol) -> UIViewController {
         
         let vc = LogInVC()
-        let loginView = LogInView()
-        let loginPresenter = LoginPresenter()
+        let loginPresenter = LoginViewModel()
         let firebaseService = FirebaseService()
         
-        vc.logInView = loginView
-        vc.loginPresenter = loginPresenter
+        vc.loginViewModel = loginPresenter
         loginPresenter.firebaseService = firebaseService
         loginPresenter.router = router
         

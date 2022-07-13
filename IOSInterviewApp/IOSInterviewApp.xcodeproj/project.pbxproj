@@ -13,7 +13,7 @@
 		BE0489F12878B02800887CD0 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0489F02878B02800887CD0 /* Questions.swift */; };
 		BE42407926DFA424009A6FC8 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42407826DFA424009A6FC8 /* UserData.swift */; };
 		BE42407C26DFA674009A6FC8 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42407B26DFA674009A6FC8 /* FirebaseService.swift */; };
-		BE7D981E2879728C00A50F4D /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D981D2879728B00A50F4D /* LoginPresenter.swift */; };
+		BE7D981E2879728C00A50F4D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D981D2879728B00A50F4D /* LoginViewModel.swift */; };
 		BE7D982228797A2D00A50F4D /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D982128797A2D00A50F4D /* RegistrationPresenter.swift */; };
 		BE7D982728798C9D00A50F4D /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D982628798C9D00A50F4D /* SettingsPresenter.swift */; };
 		BE7D982F287994AA00A50F4D /* QuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D982E287994AA00A50F4D /* QuestionPresenter.swift */; };
@@ -31,7 +31,6 @@
 		BEDDCE0126DA1A9C003C1CB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDDCDFF26DA1A9C003C1CB3 /* LaunchScreen.storyboard */; };
 		BEDDCE0B26DA22FE003C1CB3 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE0A26DA22FE003C1CB3 /* RegistrationView.swift */; };
 		BEDDCE1026DA56D6003C1CB3 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE0F26DA56D6003C1CB3 /* LogInVC.swift */; };
-		BEDDCE1226DA56E2003C1CB3 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1126DA56E2003C1CB3 /* LogInView.swift */; };
 		BEDDCE1526DAA711003C1CB3 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1426DAA711003C1CB3 /* MenuVC.swift */; };
 		BEDDCE1726DAA71B003C1CB3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1626DAA71B003C1CB3 /* MenuView.swift */; };
 		BEDDCE1926DAA836003C1CB3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */; };
@@ -51,7 +50,7 @@
 		BE0489F02878B02800887CD0 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		BE42407826DFA424009A6FC8 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		BE42407B26DFA674009A6FC8 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
-		BE7D981D2879728B00A50F4D /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		BE7D981D2879728B00A50F4D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BE7D982128797A2D00A50F4D /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		BE7D982628798C9D00A50F4D /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		BE7D982E287994AA00A50F4D /* QuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenter.swift; sourceTree = "<group>"; };
@@ -71,7 +70,6 @@
 		BEDDCE0226DA1A9C003C1CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEDDCE0A26DA22FE003C1CB3 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		BEDDCE0F26DA56D6003C1CB3 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
-		BEDDCE1126DA56E2003C1CB3 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		BEDDCE1426DAA711003C1CB3 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		BEDDCE1626DAA71B003C1CB3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -135,17 +133,16 @@
 			isa = PBXGroup;
 			children = (
 				BEDDCE0F26DA56D6003C1CB3 /* LogInVC.swift */,
-				BEDDCE1126DA56E2003C1CB3 /* LogInView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		BE7D9820287974E500A50F4D /* Presenter */ = {
+		BE7D9820287974E500A50F4D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				BE7D981D2879728B00A50F4D /* LoginPresenter.swift */,
+				BE7D981D2879728B00A50F4D /* LoginViewModel.swift */,
 			);
-			path = Presenter;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BE7D982328797A5C00A50F4D /* View */ = {
@@ -340,7 +337,7 @@
 			children = (
 				BE42407726DFA413009A6FC8 /* Model */,
 				BE7D981F2879749300A50F4D /* View */,
-				BE7D9820287974E500A50F4D /* Presenter */,
+				BE7D9820287974E500A50F4D /* ViewModel */,
 			);
 			path = LoginModule;
 			sourceTree = "<group>";
@@ -512,11 +509,10 @@
 				BEDDCE2126DB7AB3003C1CB3 /* CategoriesVC.swift in Sources */,
 				BE7D982228797A2D00A50F4D /* RegistrationPresenter.swift in Sources */,
 				BE0489F12878B02800887CD0 /* Questions.swift in Sources */,
-				BE7D981E2879728C00A50F4D /* LoginPresenter.swift in Sources */,
+				BE7D981E2879728C00A50F4D /* LoginViewModel.swift in Sources */,
 				BE0489EF2878A56D00887CD0 /* Results.swift in Sources */,
 				BEDDCE2626DBAC4E003C1CB3 /* QuestionVC.swift in Sources */,
 				BE8BB78F287A3F91001F89F3 /* MenuPresenter.swift in Sources */,
-				BEDDCE1226DA56E2003C1CB3 /* LogInView.swift in Sources */,
 				BEDDCE1726DAA71B003C1CB3 /* MenuView.swift in Sources */,
 				BE7D98362879AB0600A50F4D /* ResultsPresenter.swift in Sources */,
 				BEDDCE2B26DCEF6E003C1CB3 /* ResultsVC.swift in Sources */,
