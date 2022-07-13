@@ -6,19 +6,33 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 protocol LoginPresenterProtocol: AnyObject {
+    var loginTextPublishSubject: PublishSubject<String> { get set }
+    var passwordTextPublishSubject: PublishSubject<String> { get set }
     func loginButtonAction(email: String, password: String)
     func closeButtonTapped()
     func skipingAuthIfUserIs()
+    func isValid() -> Observable<Bool>
 }
 
-class LoginPresenter: LoginPresenterProtocol {
+class LoginViewModel: LoginPresenterProtocol {
+    
+    var loginTextPublishSubject = PublishSubject<String>()
+    var passwordTextPublishSubject = PublishSubject<String>()
     
     private var view = LogInVC()
     
     var firebaseService: FirebaseServiceProtocol!
     var router: RouterProtocol!
+    
+    func isValid() -> Observable<Bool> {
+        return Observable.combineLatest(loginTextPublishSubject.asObserver(), passwordTextPublishSubject.asObserver()).map { login, password in
+            login.count > 5 && password.count > 5
+        }
+    }
     
     func skipingAuthIfUserIs() {
         if firebaseService.isAuthorized() {
