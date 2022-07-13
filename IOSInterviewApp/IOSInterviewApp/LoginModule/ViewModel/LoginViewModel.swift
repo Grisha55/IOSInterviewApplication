@@ -18,7 +18,7 @@ protocol LoginPresenterProtocol: AnyObject {
     func isValid() -> Observable<Bool>
 }
 
-class LoginPresenter: LoginPresenterProtocol {
+class LoginViewModel: LoginPresenterProtocol {
     
     var loginTextPublishSubject = PublishSubject<String>()
     var passwordTextPublishSubject = PublishSubject<String>()
