@@ -78,12 +78,10 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
     func createMenuModule(router: RouterProtocol) -> UIViewController {
         
         let vc = MenuVC()
-        let menuView = MenuView()
-        let menuPresenter = MenuPresenter()
+        let menuViewModel = MenuViewModel()
         
-        vc.menuView = menuView
-        vc.menuPresenter = menuPresenter
-        menuPresenter.router = router
+        vc.menuViewModel = menuViewModel
+        menuViewModel.router = router
         
         return vc
     }
@@ -91,14 +89,12 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
     func createRegistrationModule(router: RouterProtocol) -> UIViewController {
         
         let vc = RegistrationVC()
-        let registrationView = RegistrationView()
-        let registrationPresenter = RegistrationPresenter()
+        let registrationViewModel = RegistrationViewModel()
         let firebaseService = FirebaseService()
         
-        vc.registrationView = registrationView
-        vc.registrationPresenter = registrationPresenter
-        registrationPresenter.firebaseService = firebaseService
-        registrationPresenter.router = router
+        vc.registrationViewModel = registrationViewModel
+        registrationViewModel.firebaseService = firebaseService
+        registrationViewModel.router = router
         
         return vc
     }
@@ -106,12 +102,12 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
     func createLoginModule(router: RouterProtocol) -> UIViewController {
         
         let vc = LogInVC()
-        let loginPresenter = LoginViewModel()
+        let loginViewModel = LoginViewModel()
         let firebaseService = FirebaseService()
         
-        vc.loginViewModel = loginPresenter
-        loginPresenter.firebaseService = firebaseService
-        loginPresenter.router = router
+        vc.loginViewModel = loginViewModel
+        loginViewModel.firebaseService = firebaseService
+        loginViewModel.router = router
         
         return vc
     }
