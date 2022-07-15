@@ -91,14 +91,12 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
     func createRegistrationModule(router: RouterProtocol) -> UIViewController {
         
         let vc = RegistrationVC()
-        let registrationView = RegistrationView()
-        let registrationPresenter = RegistrationPresenter()
+        let registrationViewModel = RegistrationViewModel()
         let firebaseService = FirebaseService()
         
-        vc.registrationView = registrationView
-        vc.registrationPresenter = registrationPresenter
-        registrationPresenter.firebaseService = firebaseService
-        registrationPresenter.router = router
+        vc.registrationViewModel = registrationViewModel
+        registrationViewModel.firebaseService = firebaseService
+        registrationViewModel.router = router
         
         return vc
     }
