@@ -13,7 +13,7 @@ class LogInVC: UIViewController {
 
     // MARK: - Properties
     let disposeBag = DisposeBag()
-    var loginViewModel: LoginPresenterProtocol!
+    var loginViewModel: LoginViewModel!
     
     lazy var loginButton: UIButton = {
         let button = UIButton()
@@ -164,18 +164,24 @@ class LogInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .purple
+        
         setupUI()
-        bindingForFields()
+        loginViewModel.skipingAuthIfUserIs()
+        bind()
     }
     
-    private func bindingForFields() {
-        self.loginTF.rx.text.map { $0 ?? "" }.bind(to: loginViewModel.loginTextPublishSubject).disposed(by: disposeBag)
+    private func bind() {
+        let input = LoginViewModel.Input(
+            login: loginTF.rx.text.asDriver(),
+            password: passwordTF.rx.text.asDriver(),
+            validate: logInButton.rx.tap.asDriver(),
+            close: closeButton.rx.tap.asDriver())
         
-        self.passwordTF.rx.text.map { $0 ?? "" }.bind(to: loginViewModel.passwordTextPublishSubject).disposed(by: disposeBag)
+        let output = loginViewModel.transform(input)
         
-        loginViewModel.isValid().bind(to: self.loginButton.rx.isEnabled).disposed(by: disposeBag)
-        
-        loginViewModel.isValid().map { $0 ? 1 : 0.1 }.bind(to: self.loginButton.rx.alpha).disposed(by: disposeBag)
+        output.shouldHideButton
+            .bind(to: logInButton.rx.isEnabled)
+            .disposed(by: disposeBag)
     }
     
     private func setupUI() {
