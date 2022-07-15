@@ -78,12 +78,10 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
     func createMenuModule(router: RouterProtocol) -> UIViewController {
         
         let vc = MenuVC()
-        let menuView = MenuView()
-        let menuPresenter = MenuPresenter()
+        let menuViewModel = MenuViewModel()
         
-        vc.menuView = menuView
-        vc.menuPresenter = menuPresenter
-        menuPresenter.router = router
+        vc.menuViewModel = menuViewModel
+        menuViewModel.router = router
         
         return vc
     }
