@@ -16,7 +16,7 @@
 		BE7D981E2879728C00A50F4D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D981D2879728B00A50F4D /* LoginViewModel.swift */; };
 		BE7D982228797A2D00A50F4D /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D982128797A2D00A50F4D /* RegistrationViewModel.swift */; };
 		BE7D982728798C9D00A50F4D /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D982628798C9D00A50F4D /* SettingsPresenter.swift */; };
-		BE7D982F287994AA00A50F4D /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D982E287994AA00A50F4D /* QuestionViewModel.swift */; };
+		BE7D982F287994AA00A50F4D /* QuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D982E287994AA00A50F4D /* QuestionPresenter.swift */; };
 		BE7D98332879A14A00A50F4D /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D98322879A14A00A50F4D /* AssemblyBuilder.swift */; };
 		BE7D98362879AB0600A50F4D /* ResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D98352879AB0600A50F4D /* ResultsPresenter.swift */; };
 		BE8BB78D287A1920001F89F3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8BB78C287A1920001F89F3 /* Router.swift */; };
@@ -50,7 +50,7 @@
 		BE7D981D2879728B00A50F4D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BE7D982128797A2D00A50F4D /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		BE7D982628798C9D00A50F4D /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
-		BE7D982E287994AA00A50F4D /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
+		BE7D982E287994AA00A50F4D /* QuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenter.swift; sourceTree = "<group>"; };
 		BE7D98322879A14A00A50F4D /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
 		BE7D98352879AB0600A50F4D /* ResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPresenter.swift; sourceTree = "<group>"; };
 		BE8BB78C287A1920001F89F3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 		BE7D98302879950F00A50F4D /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				BE7D982E287994AA00A50F4D /* QuestionViewModel.swift */,
+				BE7D982E287994AA00A50F4D /* QuestionPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -495,7 +495,7 @@
 			files = (
 				BE42407C26DFA674009A6FC8 /* FirebaseService.swift in Sources */,
 				BE7D98332879A14A00A50F4D /* AssemblyBuilder.swift in Sources */,
-				BE7D982F287994AA00A50F4D /* QuestionViewModel.swift in Sources */,
+				BE7D982F287994AA00A50F4D /* QuestionPresenter.swift in Sources */,
 				BEDDCE2326DB7FB2003C1CB3 /* CategoryCell.swift in Sources */,
 				BEDDCE2126DB7AB3003C1CB3 /* CategoriesVC.swift in Sources */,
 				BE7D982228797A2D00A50F4D /* RegistrationViewModel.swift in Sources */,
