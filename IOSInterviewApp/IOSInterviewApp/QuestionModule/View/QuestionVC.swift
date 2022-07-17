@@ -12,7 +12,7 @@ import RxCocoa
 class QuestionVC: UIViewController {
 
     private let bag = DisposeBag()
-    var questionViewModel: QuestionViewModel!
+    var questionPresenter: QuestionPresenterProtocol!
     var numberOfQuestion = 0
     
     lazy var stackWithButtons: UIStackView = {
@@ -22,17 +22,29 @@ class QuestionVC: UIViewController {
         stack.distribution = .fillEqually
         stack.spacing = 50
         
-        stack.addArrangedSubview(nextButton)
+        stack.addArrangedSubview(knowButton)
+        stack.addArrangedSubview(unKnowButton)
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
     
-    lazy var nextButton: UIButton = {
+    lazy var knowButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Show next", for: .normal)
+        button.setTitle("Знаю", for: .normal)
         button.layer.cornerRadius = 15
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.black.cgColor
+        button.addTarget(self, action: #selector(knowButtonAction), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var unKnowButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Не знаю", for: .normal)
+        button.layer.cornerRadius = 15
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.black.cgColor
+        button.addTarget(self, action: #selector(unKnowButtonAction), for: .touchUpInside)
         return button
     }()
     
@@ -62,6 +74,7 @@ class QuestionVC: UIViewController {
         button.setTitle("ShowAnswer", for: .normal)
         button.setTitleColor(.red, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(showAnswerButtonAction), for: .touchUpInside)
         return button
     }()
     
@@ -72,27 +85,13 @@ class QuestionVC: UIViewController {
         title = "Вопросы"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         setupUI()
-        bind()
+        setupFirstQuestions()
     }
     
-    private func bind() {
-        let inputs = QuestionViewModel.Input(question: questionTextView.rx.text.asDriver(),
-                                             answer: answerTextView.rx.text.asDriver(),
-                                             next: nextButton.rx.tap.asDriver(),
-                                             showAnswer: showAnswerButton.rx.tap.asDriver())
-        
-        let output = questionViewModel.transform(inputs)
-        output.newQuestion
-            .drive(questionTextView.rx.text)
-            .disposed(by: bag)
-        
-        output.newAnswer
-            .drive(answerTextView.rx.text)
-            .disposed(by: bag)
-        
-        output.isShown
-            .drive(answerTextView.rx.isHidden)
-            .disposed(by: bag)
+    private func setupFirstQuestions() {
+        self.questionTextView.text = questionPresenter.questionsDict?.first?.key
+        self.answerTextView.text = questionPresenter.questionsDict?.first?.value
+        self.answerTextView.isHidden = true
     }
     
     private func setupUI() {
@@ -118,8 +117,23 @@ class QuestionVC: UIViewController {
             
             self.showAnswerButton.topAnchor.constraint(equalTo: answerTextView.bottomAnchor, constant: 5),
             self.showAnswerButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            self.showAnswerButton.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -10)
+            self.showAnswerButton.bottomAnchor.constraint(equalTo: knowButton.topAnchor, constant: -10)
         ])
+    }
+    
+    @objc
+    func knowButtonAction() {
+        self.questionPresenter.knowButtonAction()
+    }
+    
+    @objc
+    func unKnowButtonAction() {
+        self.questionPresenter.unKnowButtonAction()
+    }
+    
+    @objc
+    func showAnswerButtonAction() {
+        self.questionPresenter.unhideAnswerButtonAction()
     }
     
 }

@@ -34,12 +34,13 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
     func createQuestionsModule(questionsType: QuestionsType, router: RouterProtocol) -> UIViewController {
         
         let vc = QuestionVC()
-        let questionViewModel = QuestionViewModel()
+        let questionPresenter = QuestionPresenter()
         let questions = Questions()
         
-        vc.questionViewModel = questionViewModel
-        questionViewModel.questions = questions
-        questionViewModel.questionType = questionsType
+        vc.questionPresenter = questionPresenter
+        questionPresenter.questionView = vc
+        questionPresenter.questions = questions
+        questionPresenter.questionType = questionsType
         
         return vc
     }
