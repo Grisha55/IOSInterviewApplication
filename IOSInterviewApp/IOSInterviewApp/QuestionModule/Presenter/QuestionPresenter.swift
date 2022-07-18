@@ -29,9 +29,8 @@ class QuestionPresenter: QuestionPresenterProtocol {
         }
     }
     var questionView: QuestionVC!
-    var numberOfQuestions = 1
-    var trueAnswers = 0.0
-    var falseAnswers = 0.1
+    var numberOfQuestions = 0
+    var trueAnswers = 0
     
     func unhideAnswerButtonAction() {
         self.questionView.answerTextView.isHidden = false
@@ -53,7 +52,6 @@ class QuestionPresenter: QuestionPresenterProtocol {
         self.questionView.answerTextView.text = newAnswer
         
         numberOfQuestions += 1
-        falseAnswers += 1
         
     }
     
@@ -72,13 +70,12 @@ class QuestionPresenter: QuestionPresenterProtocol {
         self.questionView.questionTextView.text = newQuestion
         self.questionView.answerTextView.text = newAnswer
         
-        //self.questionsDict?.removeValue(forKey: newQuestion)
-        
         numberOfQuestions += 1
         trueAnswers += 1
         
         
-        let result = Int(trueAnswers * 100 / Double(numberOfQuestions))
+        let result = trueAnswers * 100 / (questionsDict?.count ?? 10)
+        print(result)
         
         guard let questionType = questionType else { return }
         
