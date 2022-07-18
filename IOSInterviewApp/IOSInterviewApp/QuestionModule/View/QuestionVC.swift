@@ -13,14 +13,13 @@ class QuestionVC: UIViewController {
 
     private let bag = DisposeBag()
     var questionPresenter: QuestionPresenterProtocol!
-    var numberOfQuestion = 0
     
     lazy var stackWithButtons: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.alignment = .center
         stack.distribution = .fillEqually
-        stack.spacing = 50
+        stack.spacing = 20
         
         stack.addArrangedSubview(knowButton)
         stack.addArrangedSubview(unKnowButton)
@@ -31,6 +30,7 @@ class QuestionVC: UIViewController {
     lazy var knowButton: UIButton = {
         let button = UIButton()
         button.setTitle("Знаю", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         button.layer.cornerRadius = 15
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.black.cgColor
@@ -41,6 +41,7 @@ class QuestionVC: UIViewController {
     lazy var unKnowButton: UIButton = {
         let button = UIButton()
         button.setTitle("Не знаю", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         button.layer.cornerRadius = 15
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.black.cgColor
@@ -72,6 +73,7 @@ class QuestionVC: UIViewController {
     lazy var showAnswerButton: UIButton = {
         let button = UIButton()
         button.setTitle("ShowAnswer", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .light)
         button.setTitleColor(.red, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(showAnswerButtonAction), for: .touchUpInside)
@@ -102,8 +104,8 @@ class QuestionVC: UIViewController {
         
         NSLayoutConstraint.activate([
             self.stackWithButtons.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            self.stackWithButtons.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 100),
-            self.stackWithButtons.heightAnchor.constraint(equalToConstant: 80),
+            self.stackWithButtons.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 50),
+            self.stackWithButtons.heightAnchor.constraint(equalToConstant: 200),
             self.stackWithButtons.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
             
             self.answerTextView.topAnchor.constraint(equalTo: questionTextView.bottomAnchor, constant: 30),
