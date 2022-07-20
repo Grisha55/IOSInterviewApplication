@@ -13,5 +13,6 @@ target 'IOSInterviewApp' do
   pod 'FirebaseFirestoreSwift'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RealmSwift'
   
 end
