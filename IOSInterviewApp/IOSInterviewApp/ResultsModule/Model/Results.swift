@@ -6,9 +6,19 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Results {
+class Results: Object {
+    @objc dynamic var moduleName: String = ""
+    @objc dynamic var procents: Int = 0
+}
+
+class RealmResults: Object {
     
-    var moduleName: String
-    var procents: Int
+    @objc dynamic var moduleName: String = ""
+    let results = List<Results>()
+    
+    override class func primaryKey() -> String? {
+        return "moduleName"
+    }
 }

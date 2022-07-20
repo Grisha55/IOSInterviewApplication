@@ -22,6 +22,8 @@ protocol QuestionPresenterProtocol: AnyObject {
 class QuestionPresenter: QuestionPresenterProtocol {
     
     var questions: QuestionsProtocol!
+    var results = [Results]()
+    var realmService: RealmServiceProtocol!
     var questionsDict: [String : String]?
     var questionType: QuestionsType? {
         willSet {
@@ -42,6 +44,7 @@ class QuestionPresenter: QuestionPresenterProtocol {
         guard let dict = self.questionsDict, numberOfQuestions < dict.count else {
             questionView.answerTextView.text = "Вы закончили данный раздел"
             questionView.questionTextView.text = "Вы закончили данный раздел"
+            self.saveDataIntoRealm()
             return
         }
         
@@ -61,6 +64,7 @@ class QuestionPresenter: QuestionPresenterProtocol {
         guard let dict = self.questionsDict, numberOfQuestions < dict.count else {
             questionView.answerTextView.text = "Вы закончили данный раздел"
             questionView.questionTextView.text = "Вы закончили данный раздел"
+            self.saveDataIntoRealm()
             return
         }
         
@@ -74,14 +78,19 @@ class QuestionPresenter: QuestionPresenterProtocol {
         trueAnswers += 1
         
         
-        let result = trueAnswers * 100 / (questionsDict?.count ?? 10)
-        print(result)
-        
+        let procents = trueAnswers * 100 / (questionsDict?.count ?? 10)
         guard let questionType = questionType else { return }
         
-        AnswerResults.shared.answersResults.updateValue(result, forKey: questionType.rawValue)
-        
-        
+        let result = Results()
+        result.moduleName = questionType.rawValue
+        result.procents = procents
+
+        self.results.append(result)
+    }
+    
+    private func saveDataIntoRealm() {
+        guard let lastElement = results.last else { return }
+        realmService.savingDataIntoRealm(result: lastElement, module: questionType?.rawValue ?? "")
     }
     
 }

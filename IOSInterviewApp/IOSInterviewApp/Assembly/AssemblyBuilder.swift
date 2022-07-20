@@ -27,6 +27,7 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         
         vc.resultsPresenter = resultsPresenter
         resultsPresenter.router = router
+        resultsPresenter.realmService = RealmService()
         
         return vc
     }
@@ -40,6 +41,7 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         vc.questionPresenter = questionPresenter
         questionPresenter.questionView = vc
         questionPresenter.questions = questions
+        questionPresenter.realmService = RealmService()
         questionPresenter.questionType = questionsType
         
         return vc

@@ -20,6 +20,7 @@ class ResultsVC: UIViewController {
         super.viewDidLoad()
         
         setupNavigationController()
+        resultsPresenter.pairResultsTableAndRealm(tableView: resultTableView)
     }
     
     // MARK: - Methods
@@ -69,16 +70,19 @@ extension ResultsVC: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension ResultsVC: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resultsPresenter.results.count
+        return resultsPresenter.realmResults?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ResultsCell.self), for: indexPath) as? ResultsCell else { return UITableViewCell() }
         
-        let module = Array(resultsPresenter.results.keys)[indexPath.row]
-        let procent = Array(resultsPresenter.results.values)[indexPath.row]
-        cell.configureResultsCell(module: module, procent: procent)
+        guard let results = resultsPresenter.realmResults?[indexPath.row] else { return UITableViewCell() }
+        cell.configureResultsCell(module: results.moduleName, procent: results.procents)
         return cell
     }
 }

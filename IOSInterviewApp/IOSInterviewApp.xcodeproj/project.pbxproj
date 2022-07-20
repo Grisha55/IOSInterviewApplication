@@ -19,11 +19,11 @@
 		BE7D982F287994AA00A50F4D /* QuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D982E287994AA00A50F4D /* QuestionPresenter.swift */; };
 		BE7D98332879A14A00A50F4D /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D98322879A14A00A50F4D /* AssemblyBuilder.swift */; };
 		BE7D98362879AB0600A50F4D /* ResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D98352879AB0600A50F4D /* ResultsPresenter.swift */; };
+		BE898E532888490A00D39D0D /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE898E522888490A00D39D0D /* RealmService.swift */; };
 		BE8BB78D287A1920001F89F3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8BB78C287A1920001F89F3 /* Router.swift */; };
 		BE8BB78F287A3F91001F89F3 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8BB78E287A3F91001F89F3 /* MenuViewModel.swift */; };
 		BE8BB792287A410C001F89F3 /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8BB791287A410C001F89F3 /* CategoriesPresenter.swift */; };
 		BE9F87A826DF9EBD00743499 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */; };
-		BEBF2571287DFD2600C92C4F /* AnswerResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF2570287DFD2600C92C4F /* AnswerResults.swift */; };
 		BEDDCDF526DA1A9A003C1CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */; };
 		BEDDCDF726DA1A9A003C1CB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */; };
 		BEDDCDF926DA1A9A003C1CB3 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCDF826DA1A9A003C1CB3 /* RegistrationVC.swift */; };
@@ -53,11 +53,11 @@
 		BE7D982E287994AA00A50F4D /* QuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenter.swift; sourceTree = "<group>"; };
 		BE7D98322879A14A00A50F4D /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
 		BE7D98352879AB0600A50F4D /* ResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPresenter.swift; sourceTree = "<group>"; };
+		BE898E522888490A00D39D0D /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		BE8BB78C287A1920001F89F3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		BE8BB78E287A3F91001F89F3 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		BE8BB791287A410C001F89F3 /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
 		BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BEBF2570287DFD2600C92C4F /* AnswerResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerResults.swift; sourceTree = "<group>"; };
 		BEDDCDF126DA1A9A003C1CB3 /* IOSInterviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSInterviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -238,6 +238,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		BE898E542888491800D39D0D /* RealmService */ = {
+			isa = PBXGroup;
+			children = (
+				BE898E522888490A00D39D0D /* RealmService.swift */,
+			);
+			path = RealmService;
+			sourceTree = "<group>";
+		};
 		BE8BB78B287A18F2001F89F3 /* AppRouter */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,14 +270,6 @@
 			name = Presenter;
 			sourceTree = "<group>";
 		};
-		BEBF256F287DFD0B00C92C4F /* AnswersResults */ = {
-			isa = PBXGroup;
-			children = (
-				BEBF2570287DFD2600C92C4F /* AnswerResults.swift */,
-			);
-			path = AnswersResults;
-			sourceTree = "<group>";
-		};
 		BEDDCDE826DA1A9A003C1CB3 = {
 			isa = PBXGroup;
 			children = (
@@ -291,12 +291,12 @@
 		BEDDCDF326DA1A9A003C1CB3 /* IOSInterviewApp */ = {
 			isa = PBXGroup;
 			children = (
-				BEBF256F287DFD0B00C92C4F /* AnswersResults */,
 				BE8BB78B287A18F2001F89F3 /* AppRouter */,
 				BE7D98312879A13800A50F4D /* Assembly */,
 				BE0489F02878B02800887CD0 /* Questions.swift */,
 				BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */,
 				BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */,
+				BE898E542888491800D39D0D /* RealmService */,
 				BE42407A26DFA646009A6FC8 /* FirebaseService */,
 				BEDDCE2926DCEF53003C1CB3 /* ResultsModule */,
 				BEDDCE2426DBAC30003C1CB3 /* QuestionModule */,
@@ -511,11 +511,11 @@
 				BEDDCE1926DAA836003C1CB3 /* TabBarController.swift in Sources */,
 				BEDDCDF526DA1A9A003C1CB3 /* AppDelegate.swift in Sources */,
 				BEDDCE1526DAA711003C1CB3 /* MenuVC.swift in Sources */,
-				BEBF2571287DFD2600C92C4F /* AnswerResults.swift in Sources */,
 				BEDDCDF726DA1A9A003C1CB3 /* SceneDelegate.swift in Sources */,
 				BE42407926DFA424009A6FC8 /* UserData.swift in Sources */,
 				BE0489ED2878A28700887CD0 /* ResultsCell.swift in Sources */,
 				BE8BB792287A410C001F89F3 /* CategoriesPresenter.swift in Sources */,
+				BE898E532888490A00D39D0D /* RealmService.swift in Sources */,
 				BE8BB78D287A1920001F89F3 /* Router.swift in Sources */,
 				BEDDCE1026DA56D6003C1CB3 /* LogInVC.swift in Sources */,
 				BEDDCE1C26DB6895003C1CB3 /* SettingsVC.swift in Sources */,
