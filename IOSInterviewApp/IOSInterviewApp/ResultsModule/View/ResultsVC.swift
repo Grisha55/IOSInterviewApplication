@@ -16,14 +16,29 @@ class ResultsVC: UIViewController {
         return table
     }()
     
+    lazy var resetAllElementsButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Очистить все", for: .normal)
+        button.setTitleColor(.red, for: .normal)
+        button.addTarget(self, action: #selector(resetButtonDidTapped), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = .white
         setupNavigationController()
+        setResultTableViewConstraints()
+        setResetAllElementsButtonConstraints()
         resultsPresenter.pairResultsTableAndRealm(tableView: resultTableView)
     }
     
     // MARK: - Methods
+    
+    @objc
+    func resetButtonDidTapped() {
+        self.resultsPresenter.deleteAllElements()
+    }
     
     private func setupNavigationController() {
         title = "Результаты"
@@ -31,7 +46,6 @@ class ResultsVC: UIViewController {
         let settingsButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(settingsButtonDidTapped))
         self.navigationItem.rightBarButtonItem = settingsButton
         configureResultTableView()
-        setResultTableViewConstraints()
     }
     
     @objc
@@ -47,10 +61,17 @@ class ResultsVC: UIViewController {
         resultTableView.delegate = self
     }
     
+    private func setResetAllElementsButtonConstraints() {
+        view.addSubview(resetAllElementsButton)
+        resetAllElementsButton.translatesAutoresizingMaskIntoConstraints = false
+        resetAllElementsButton.topAnchor.constraint(equalTo: self.resultTableView.bottomAnchor, constant: 50).isActive = true
+        resetAllElementsButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20).isActive = true
+        resetAllElementsButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+    }
+    
     private func setResultTableViewConstraints() {
         resultTableView.translatesAutoresizingMaskIntoConstraints = false
         resultTableView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        resultTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         resultTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         resultTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
     }
