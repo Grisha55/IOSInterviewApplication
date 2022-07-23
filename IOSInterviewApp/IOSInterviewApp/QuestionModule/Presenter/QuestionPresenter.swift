@@ -31,7 +31,7 @@ class QuestionPresenter: QuestionPresenterProtocol {
         }
     }
     var questionView: QuestionVC!
-    var numberOfQuestions = 0
+    var numberOfQuestions = 1
     var trueAnswers = 0
     
     func unhideAnswerButtonAction() {
