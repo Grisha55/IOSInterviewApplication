@@ -43,9 +43,20 @@ class ResultsVC: UIViewController {
     private func setupNavigationController() {
         title = "Результаты"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        let settingsButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(settingsButtonDidTapped))
+        let settingsButton = UIBarButtonItem(title: "Настройки", style: .done, target: self, action: #selector(settingsButtonDidTapped))
         self.navigationItem.rightBarButtonItem = settingsButton
+        settingsButton.tintColor = .black
+        
+        let newBackButton = UIBarButtonItem(title: "Меню",
+                                            style: .plain, target: self, action: #selector(backButtonAction))
+        navigationController?.navigationBar.topItem?.backBarButtonItem = newBackButton
+        newBackButton.tintColor = .black
         configureResultTableView()
+    }
+    
+    @objc
+    func backButtonAction() {
+        self.dismiss(animated: true)
     }
     
     @objc
