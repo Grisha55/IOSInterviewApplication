@@ -33,7 +33,7 @@ class QuestionVC: UIViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         button.layer.cornerRadius = 15
         button.layer.borderWidth = 2
-        button.layer.borderColor = UIColor.black.cgColor
+        button.layer.borderColor = UIColor.setColor(lightColor: .black, darkColor: .white).cgColor
         button.addTarget(self, action: #selector(knowButtonAction), for: .touchUpInside)
         return button
     }()
@@ -44,7 +44,7 @@ class QuestionVC: UIViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         button.layer.cornerRadius = 15
         button.layer.borderWidth = 2
-        button.layer.borderColor = UIColor.black.cgColor
+        button.layer.borderColor = UIColor.setColor(lightColor: .black, darkColor: .white).cgColor
         button.addTarget(self, action: #selector(unKnowButtonAction), for: .touchUpInside)
         return button
     }()
@@ -54,7 +54,7 @@ class QuestionVC: UIViewController {
         textView.textColor = .black
         textView.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         textView.isUserInteractionEnabled = false
-        textView.backgroundColor = .green
+        textView.backgroundColor = UIColor.setColor(lightColor: .systemPurple, darkColor: .brown)
         textView.isHidden = true
         textView.translatesAutoresizingMaskIntoConstraints = false
         return textView
@@ -65,7 +65,7 @@ class QuestionVC: UIViewController {
         textView.textColor = .black
         textView.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         textView.isUserInteractionEnabled = false
-        textView.backgroundColor = .lightGray
+        textView.backgroundColor = UIColor.setColor(lightColor: .systemPurple, darkColor: .orange)
         textView.translatesAutoresizingMaskIntoConstraints = false
         return textView
     }()
@@ -83,9 +83,10 @@ class QuestionVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .purple
+        view.backgroundColor = UIColor.setColor(lightColor: .purple, darkColor: .black)
         title = "Вопросы"
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.setColor(lightColor: .black, darkColor: .white)]
         setupUI()
         setupFirstQuestions()
     }

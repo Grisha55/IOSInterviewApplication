@@ -26,7 +26,7 @@ class ResultsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = UIColor.setColor(lightColor: .purple, darkColor: .black)
         setupNavigationController()
         setResultTableViewConstraints()
         setResetAllElementsButtonConstraints()
@@ -45,12 +45,12 @@ class ResultsVC: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         let settingsButton = UIBarButtonItem(title: "Настройки", style: .done, target: self, action: #selector(settingsButtonDidTapped))
         self.navigationItem.rightBarButtonItem = settingsButton
-        settingsButton.tintColor = .black
+        settingsButton.tintColor = UIColor.setColor(lightColor: .black, darkColor: .white)
         
         let newBackButton = UIBarButtonItem(title: "Меню",
                                             style: .plain, target: self, action: #selector(backButtonAction))
         navigationController?.navigationBar.topItem?.backBarButtonItem = newBackButton
-        newBackButton.tintColor = .black
+        newBackButton.tintColor = UIColor.setColor(lightColor: .black, darkColor: .white)
         configureResultTableView()
     }
     
