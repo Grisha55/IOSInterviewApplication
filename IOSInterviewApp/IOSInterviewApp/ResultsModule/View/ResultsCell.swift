@@ -12,20 +12,21 @@ class ResultsCell: UITableViewCell {
     private let moduleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
-        label.textColor = .black
+        label.textColor = UIColor.setColor(lightColor: .black, darkColor: .white)
         return label
     }()
     
     private let procentLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
-        label.textColor = .black
+        label.textColor = UIColor.setColor(lightColor: .black, darkColor: .white)
         return label
     }()
     
     private let stackWithLabels: UIStackView = {
         let stack = UIStackView()
         stack.alignment = .center
+        
         stack.axis = .horizontal
         stack.distribution = .fillEqually
         return stack
@@ -34,6 +35,7 @@ class ResultsCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        self.backgroundColor = UIColor.setColor(lightColor: .lightGray, darkColor: .purple)
         self.addSubview(stackWithLabels)
         stackWithLabels.addArrangedSubview(moduleLabel)
         stackWithLabels.addArrangedSubview(procentLabel)

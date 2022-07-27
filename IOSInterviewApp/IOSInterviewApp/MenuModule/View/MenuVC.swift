@@ -48,9 +48,10 @@ class MenuVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = UIColor.setColor(lightColor: .white, darkColor: .black)
         self.title = "Меню"
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.setColor(lightColor: .black, darkColor: .white)]
         self.navigationItem.setHidesBackButton(true, animated: true)
         setupUI()
         bind()
