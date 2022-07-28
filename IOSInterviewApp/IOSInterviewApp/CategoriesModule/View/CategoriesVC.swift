@@ -30,13 +30,24 @@ class CategoriesVC: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.setColor(lightColor: .white, darkColor: .black)
-        self.title = "Категории"
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.setColor(lightColor: .black, darkColor: .white)]
+        setupNavigationController()
         setupUI()
     }
     
     // MARK: - Methods
 
+    private func setupNavigationController() {
+        self.title = "Категории"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.setColor(lightColor: .black, darkColor: .white)]
+        let backButton = UIBarButtonItem(title: "Меню", style: .done, target: self, action: #selector(backButtonAction))
+        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        backButton.tintColor = UIColor.setColor(lightColor: .black, darkColor: .white)
+    }
+    
+    @objc func backButtonAction() {
+        self.navigationController?.dismiss(animated: true)
+    }
+    
     private func setupUI() {
         view.addSubview(collectionView)
         
