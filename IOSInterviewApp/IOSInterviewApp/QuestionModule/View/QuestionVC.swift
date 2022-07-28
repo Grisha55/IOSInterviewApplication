@@ -72,7 +72,7 @@ class QuestionVC: UIViewController {
     
     lazy var showAnswerButton: UIButton = {
         let button = UIButton()
-        button.setTitle("ShowAnswer", for: .normal)
+        button.setTitle("Показать ответ", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .light)
         button.setTitleColor(.red, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -84,11 +84,23 @@ class QuestionVC: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.setColor(lightColor: .purple, darkColor: .black)
+        setupNavigationController()
+        setupUI()
+        setupFirstQuestions()
+    }
+    
+    private func setupNavigationController() {
         title = "Вопросы"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.setColor(lightColor: .black, darkColor: .white)]
-        setupUI()
-        setupFirstQuestions()
+        
+        let newBackButton = UIBarButtonItem(title: "Категории", style: .done, target: self, action: #selector(backButtonAction))
+        navigationController?.navigationBar.topItem?.backBarButtonItem = newBackButton
+        newBackButton.tintColor = UIColor.setColor(lightColor: .white, darkColor: .white)
+    }
+    
+    @objc func backButtonAction() {
+        self.navigationController?.dismiss(animated: true)
     }
     
     private func setupFirstQuestions() {

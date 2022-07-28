@@ -99,11 +99,24 @@ class SettingsVC: UIViewController {
         
         view.backgroundColor = UIColor.setColor(lightColor: .purple, darkColor: .black)
         setupUI()
-        title = "Настройки"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+        setupNavigationController()
     }
     
     // MARK: - Methods
+    
+    private func setupNavigationController() {
+        title = "Настройки"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let newBackButton = UIBarButtonItem(title: "Меню",
+                                            style: .plain, target: self, action: #selector(backButtonAction))
+        navigationController?.navigationBar.topItem?.backBarButtonItem = newBackButton
+        newBackButton.tintColor = UIColor.setColor(lightColor: .white, darkColor: .white)
+    }
+    
+    @objc func backButtonAction() {
+        self.navigationController?.dismiss(animated: true)
+    }
     
     @objc func darkModeToggleAction(_ toggle: UISwitch) {
         self.settingsPresenter.darkModeToggleAction(toggle)
