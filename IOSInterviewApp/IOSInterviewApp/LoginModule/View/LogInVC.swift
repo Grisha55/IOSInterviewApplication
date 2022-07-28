@@ -161,6 +161,12 @@ class LogInVC: UIViewController {
         return label
     }()
     
+    override func loadView() {
+        super.loadView()
+        
+        UserDefaults.standard.set(false, forKey: "darkModeIsOn")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .purple

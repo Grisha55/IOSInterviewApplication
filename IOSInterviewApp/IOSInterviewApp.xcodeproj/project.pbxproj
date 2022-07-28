@@ -33,11 +33,12 @@
 		BEDDCE1526DAA711003C1CB3 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1426DAA711003C1CB3 /* MenuVC.swift */; };
 		BEDDCE1926DAA836003C1CB3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */; };
 		BEDDCE1C26DB6895003C1CB3 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1B26DB6895003C1CB3 /* SettingsVC.swift */; };
-		BEDDCE1E26DB68C5003C1CB3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1D26DB68C5003C1CB3 /* SettingsView.swift */; };
 		BEDDCE2126DB7AB3003C1CB3 /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE2026DB7AB3003C1CB3 /* CategoriesVC.swift */; };
 		BEDDCE2326DB7FB2003C1CB3 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE2226DB7FB2003C1CB3 /* CategoryCell.swift */; };
 		BEDDCE2626DBAC4E003C1CB3 /* QuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE2526DBAC4E003C1CB3 /* QuestionVC.swift */; };
 		BEDDCE2B26DCEF6E003C1CB3 /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE2A26DCEF6E003C1CB3 /* ResultsVC.swift */; };
+		BEFD9B192891212E00AFD9E4 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFD9B182891212E00AFD9E4 /* ThemeModel.swift */; };
+		BEFD9B1C289153B800AFD9E4 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFD9B1B289153B800AFD9E4 /* UIColor+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,11 +70,12 @@
 		BEDDCE1426DAA711003C1CB3 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BEDDCE1B26DB6895003C1CB3 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		BEDDCE1D26DB68C5003C1CB3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		BEDDCE2026DB7AB3003C1CB3 /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
 		BEDDCE2226DB7FB2003C1CB3 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		BEDDCE2526DBAC4E003C1CB3 /* QuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVC.swift; sourceTree = "<group>"; };
 		BEDDCE2A26DCEF6E003C1CB3 /* ResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsVC.swift; sourceTree = "<group>"; };
+		BEFD9B182891212E00AFD9E4 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
+		BEFD9B1B289153B800AFD9E4 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		C6239E7D12789DF75E79422B /* Pods-IOSInterviewApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSInterviewApp.debug.xcconfig"; path = "Target Support Files/Pods-IOSInterviewApp/Pods-IOSInterviewApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D9E5ADD2E27B229986167853 /* Pods_IOSInterviewApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSInterviewApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -201,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				BEDDCE1B26DB6895003C1CB3 /* SettingsVC.swift */,
-				BEDDCE1D26DB68C5003C1CB3 /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,6 +292,7 @@
 		BEDDCDF326DA1A9A003C1CB3 /* IOSInterviewApp */ = {
 			isa = PBXGroup;
 			children = (
+				BEFD9B1A289153A300AFD9E4 /* Extensions */,
 				BE8BB78B287A18F2001F89F3 /* AppRouter */,
 				BE7D98312879A13800A50F4D /* Assembly */,
 				BE0489F02878B02800887CD0 /* Questions.swift */,
@@ -345,6 +347,7 @@
 		BEDDCE1A26DB686F003C1CB3 /* SettingsModule */ = {
 			isa = PBXGroup;
 			children = (
+				BEFD9B172891212000AFD9E4 /* Model */,
 				BE7D982C2879947700A50F4D /* View */,
 				BE7D982D2879947E00A50F4D /* Presenter */,
 			);
@@ -377,6 +380,22 @@
 				BE7D98342879AAE700A50F4D /* Presenter */,
 			);
 			path = ResultsModule;
+			sourceTree = "<group>";
+		};
+		BEFD9B172891212000AFD9E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BEFD9B182891212E00AFD9E4 /* ThemeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BEFD9B1A289153A300AFD9E4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BEFD9B1B289153B800AFD9E4 /* UIColor+extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,10 +515,12 @@
 				BE42407C26DFA674009A6FC8 /* FirebaseService.swift in Sources */,
 				BE7D98332879A14A00A50F4D /* AssemblyBuilder.swift in Sources */,
 				BE7D982F287994AA00A50F4D /* QuestionPresenter.swift in Sources */,
+				BEFD9B1C289153B800AFD9E4 /* UIColor+extension.swift in Sources */,
 				BEDDCE2326DB7FB2003C1CB3 /* CategoryCell.swift in Sources */,
 				BEDDCE2126DB7AB3003C1CB3 /* CategoriesVC.swift in Sources */,
 				BE7D982228797A2D00A50F4D /* RegistrationViewModel.swift in Sources */,
 				BE0489F12878B02800887CD0 /* Questions.swift in Sources */,
+				BEFD9B192891212E00AFD9E4 /* ThemeModel.swift in Sources */,
 				BE7D981E2879728C00A50F4D /* LoginViewModel.swift in Sources */,
 				BE0489EF2878A56D00887CD0 /* Results.swift in Sources */,
 				BEDDCE2626DBAC4E003C1CB3 /* QuestionVC.swift in Sources */,
@@ -519,7 +540,6 @@
 				BE8BB78D287A1920001F89F3 /* Router.swift in Sources */,
 				BEDDCE1026DA56D6003C1CB3 /* LogInVC.swift in Sources */,
 				BEDDCE1C26DB6895003C1CB3 /* SettingsVC.swift in Sources */,
-				BEDDCE1E26DB68C5003C1CB3 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

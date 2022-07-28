@@ -63,11 +63,9 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
     func createSettingsModule(router: RouterProtocol) -> UIViewController {
         
         let vc = SettingsVC()
-        let settingsView = SettingsView()
         let settingsPresenter = SettingsPresenter()
         let firebaseService = FirebaseService()
         
-        vc.settingsView = settingsView
         vc.settingsPresenter = settingsPresenter
         settingsPresenter.firebaseService = firebaseService
         settingsPresenter.router = router

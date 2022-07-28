@@ -16,13 +16,14 @@ class CategoryCell: UICollectionViewCell {
     private(set) lazy var countOfQuestionsLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.textColor = UIColor.setColor(lightColor: .black, darkColor: .black)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private(set) lazy var backView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor.setColor(lightColor: .white, darkColor: .purple)
         view.layer.cornerRadius = 20
         view.layer.borderWidth = 2
         view.layer.borderColor = UIColor.black.cgColor
@@ -33,7 +34,7 @@ class CategoryCell: UICollectionViewCell {
     private(set) lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 25)
-        label.textColor = .purple
+        label.textColor = UIColor.setColor(lightColor: .purple, darkColor: .white)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

@@ -21,7 +21,7 @@ class CategoriesVC: UIViewController {
         cv.delegate = self
         cv.dataSource = self
         cv.frame = self.view.bounds
-        cv.backgroundColor = .white
+        cv.backgroundColor = UIColor.setColor(lightColor: .white, darkColor: .black)
         cv.translatesAutoresizingMaskIntoConstraints = false
         return cv
     }()
@@ -29,7 +29,9 @@ class CategoriesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = UIColor.setColor(lightColor: .white, darkColor: .black)
+        self.title = "Категории"
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.setColor(lightColor: .black, darkColor: .white)]
         setupUI()
     }
     
