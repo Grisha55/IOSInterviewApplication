@@ -17,6 +17,17 @@ class QuestionVC: UIViewController {
     private let bag = DisposeBag()
     var questionPresenter: QuestionPresenterProtocol!
     
+    lazy var circleImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.layer.cornerRadius = 100
+        imageView.backgroundColor = UIColor.setColor(lightColor: .purple, darkColor: .black)
+        imageView.layer.borderColor = UIColor.setColor(lightColor: .gray, darkColor: .orange).cgColor
+        imageView.layer.borderWidth = 1
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     lazy var stackWithButtons: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
@@ -94,6 +105,7 @@ class QuestionVC: UIViewController {
         customShapeLayer()
         
         shapeLayer.isHidden = true
+        circleImageView.isHidden = true
     }
     
     // MARK: - Methods
@@ -103,7 +115,7 @@ class QuestionVC: UIViewController {
         
         basicAnimation.toValue = value
         
-        basicAnimation.duration = 5
+        basicAnimation.duration = 3
         
         basicAnimation.fillMode = .forwards
         
@@ -122,7 +134,7 @@ class QuestionVC: UIViewController {
         ).cgPath
         shapeLayer.path = circularPath
         
-        shapeLayer.strokeColor = UIColor.green.cgColor
+        shapeLayer.strokeColor = UIColor.setColor(lightColor: .green, darkColor: .purple).cgColor
         shapeLayer.lineWidth = 10
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeEnd = 0
@@ -155,6 +167,7 @@ class QuestionVC: UIViewController {
         view.addSubview(answerTextView)
         view.addSubview(stackWithButtons)
         view.addSubview(showAnswerButton)
+        view.addSubview(circleImageView)
         
         NSLayoutConstraint.activate([
             self.stackWithButtons.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -173,7 +186,12 @@ class QuestionVC: UIViewController {
             
             self.showAnswerButton.topAnchor.constraint(equalTo: answerTextView.bottomAnchor, constant: 5),
             self.showAnswerButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            self.showAnswerButton.bottomAnchor.constraint(equalTo: knowButton.topAnchor, constant: -10)
+            self.showAnswerButton.bottomAnchor.constraint(equalTo: knowButton.topAnchor, constant: -10),
+            
+            self.circleImageView.widthAnchor.constraint(equalToConstant: 200),
+            self.circleImageView.heightAnchor.constraint(equalToConstant: 200),
+            self.circleImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            self.circleImageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
         ])
     }
     
