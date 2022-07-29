@@ -11,6 +11,9 @@ import RxCocoa
 
 class QuestionVC: UIViewController {
 
+    let shapeLayer = CAShapeLayer()
+    
+    
     private let bag = DisposeBag()
     var questionPresenter: QuestionPresenterProtocol!
     
@@ -87,6 +90,44 @@ class QuestionVC: UIViewController {
         setupNavigationController()
         setupUI()
         setupFirstQuestions()
+        
+        customShapeLayer()
+        
+        shapeLayer.isHidden = true
+    }
+    
+    // MARK: - Methods
+    
+    func startCustomAnimation(to value: Float) {
+        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        
+        basicAnimation.toValue = value
+        
+        basicAnimation.duration = 5
+        
+        basicAnimation.fillMode = .forwards
+        
+        basicAnimation.isRemovedOnCompletion = false
+        
+        shapeLayer.add(basicAnimation, forKey: "basicAnimation")
+    }
+    
+    private func customShapeLayer() {
+        let center = view.center
+        let circularPath = UIBezierPath(arcCenter: center,
+                                        radius: 100,
+                                        startAngle: -CGFloat.pi / 2,
+                                        endAngle: 2 * CGFloat.pi / 2,
+                                        clockwise: true
+        ).cgPath
+        shapeLayer.path = circularPath
+        
+        shapeLayer.strokeColor = UIColor.green.cgColor
+        shapeLayer.lineWidth = 10
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeEnd = 0
+        
+        view.layer.addSublayer(shapeLayer)
     }
     
     private func setupNavigationController() {
