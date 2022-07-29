@@ -11,8 +11,22 @@ import RxCocoa
 
 class QuestionVC: UIViewController {
 
+    let shapeLayer = CAShapeLayer()
+    
+    
     private let bag = DisposeBag()
     var questionPresenter: QuestionPresenterProtocol!
+    
+    lazy var circleImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.layer.cornerRadius = 100
+        imageView.backgroundColor = UIColor.setColor(lightColor: .purple, darkColor: .black)
+        imageView.layer.borderColor = UIColor.setColor(lightColor: .gray, darkColor: .orange).cgColor
+        imageView.layer.borderWidth = 1
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
     
     lazy var stackWithButtons: UIStackView = {
         let stack = UIStackView()
@@ -87,6 +101,45 @@ class QuestionVC: UIViewController {
         setupNavigationController()
         setupUI()
         setupFirstQuestions()
+        
+        customShapeLayer()
+        
+        shapeLayer.isHidden = true
+        circleImageView.isHidden = true
+    }
+    
+    // MARK: - Methods
+    
+    func startCustomAnimation(to value: Float) {
+        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        
+        basicAnimation.toValue = value
+        
+        basicAnimation.duration = 3
+        
+        basicAnimation.fillMode = .forwards
+        
+        basicAnimation.isRemovedOnCompletion = false
+        
+        shapeLayer.add(basicAnimation, forKey: "basicAnimation")
+    }
+    
+    private func customShapeLayer() {
+        let center = view.center
+        let circularPath = UIBezierPath(arcCenter: center,
+                                        radius: 100,
+                                        startAngle: -CGFloat.pi / 2,
+                                        endAngle: 2 * CGFloat.pi / 2,
+                                        clockwise: true
+        ).cgPath
+        shapeLayer.path = circularPath
+        
+        shapeLayer.strokeColor = UIColor.setColor(lightColor: .green, darkColor: .purple).cgColor
+        shapeLayer.lineWidth = 10
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeEnd = 0
+        
+        view.layer.addSublayer(shapeLayer)
     }
     
     private func setupNavigationController() {
@@ -114,6 +167,7 @@ class QuestionVC: UIViewController {
         view.addSubview(answerTextView)
         view.addSubview(stackWithButtons)
         view.addSubview(showAnswerButton)
+        view.addSubview(circleImageView)
         
         NSLayoutConstraint.activate([
             self.stackWithButtons.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -132,7 +186,12 @@ class QuestionVC: UIViewController {
             
             self.showAnswerButton.topAnchor.constraint(equalTo: answerTextView.bottomAnchor, constant: 5),
             self.showAnswerButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            self.showAnswerButton.bottomAnchor.constraint(equalTo: knowButton.topAnchor, constant: -10)
+            self.showAnswerButton.bottomAnchor.constraint(equalTo: knowButton.topAnchor, constant: -10),
+            
+            self.circleImageView.widthAnchor.constraint(equalToConstant: 200),
+            self.circleImageView.heightAnchor.constraint(equalToConstant: 200),
+            self.circleImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            self.circleImageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
         ])
     }
     

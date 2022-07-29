@@ -91,6 +91,13 @@ class QuestionPresenter: QuestionPresenterProtocol {
     private func saveDataIntoRealm() {
         guard let lastElement = results.last else { return }
         realmService.savingDataIntoRealm(result: lastElement, module: questionType?.rawValue ?? "")
+        
+        questionView.shapeLayer.isHidden = false
+        questionView.circleImageView.isHidden = false
+        
+        let value = Float(lastElement.procents) / 100.0
+        
+        questionView.startCustomAnimation(to: value)
     }
     
 }
