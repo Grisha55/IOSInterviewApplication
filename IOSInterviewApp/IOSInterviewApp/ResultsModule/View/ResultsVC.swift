@@ -13,6 +13,7 @@ class ResultsVC: UIViewController {
     
     lazy var resultTableView: UITableView = {
         let table = UITableView()
+        table.backgroundColor = UIColor.setColor(lightColor: .purple, darkColor: .black)
         return table
     }()
     
@@ -20,6 +21,7 @@ class ResultsVC: UIViewController {
         let button = UIButton()
         button.setTitle("Очистить все", for: .normal)
         button.setTitleColor(.red, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
         button.addTarget(self, action: #selector(resetButtonDidTapped), for: .touchUpInside)
         return button
     }()
@@ -45,12 +47,12 @@ class ResultsVC: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         let settingsButton = UIBarButtonItem(title: "Настройки", style: .done, target: self, action: #selector(settingsButtonDidTapped))
         self.navigationItem.rightBarButtonItem = settingsButton
-        settingsButton.tintColor = UIColor.setColor(lightColor: .black, darkColor: .white)
+        settingsButton.tintColor = UIColor.setColor(lightColor: .white, darkColor: .white)
         
         let newBackButton = UIBarButtonItem(title: "Меню",
                                             style: .plain, target: self, action: #selector(backButtonAction))
         navigationController?.navigationBar.topItem?.backBarButtonItem = newBackButton
-        newBackButton.tintColor = UIColor.setColor(lightColor: .black, darkColor: .white)
+        newBackButton.tintColor = UIColor.setColor(lightColor: .white, darkColor: .white)
         configureResultTableView()
     }
     
