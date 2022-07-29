@@ -93,6 +93,7 @@ class QuestionPresenter: QuestionPresenterProtocol {
         realmService.savingDataIntoRealm(result: lastElement, module: questionType?.rawValue ?? "")
         
         questionView.shapeLayer.isHidden = false
+        questionView.circleImageView.isHidden = false
         
         let value = Float(lastElement.procents) / 100.0
         
