@@ -128,7 +128,7 @@ class QuestionVC: UIViewController {
         let center = view.center
         let circularPath = UIBezierPath(arcCenter: center,
                                         radius: 100,
-                                        startAngle: -CGFloat.pi / 2,
+                                        startAngle: -2 * CGFloat.pi / 2,
                                         endAngle: 2 * CGFloat.pi / 2,
                                         clockwise: true
         ).cgPath
