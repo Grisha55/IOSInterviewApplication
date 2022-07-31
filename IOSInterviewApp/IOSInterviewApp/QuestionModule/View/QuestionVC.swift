@@ -17,6 +17,15 @@ class QuestionVC: UIViewController {
     private let bag = DisposeBag()
     var questionPresenter: QuestionPresenterProtocol!
     
+    lazy var finishedResultLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 70, weight: .bold)
+        label.textColor = UIColor.setColor(lightColor: .white, darkColor: .white)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.isHidden = true
+        return label
+    }()
+    
     lazy var circleImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 100
@@ -168,6 +177,7 @@ class QuestionVC: UIViewController {
         view.addSubview(stackWithButtons)
         view.addSubview(showAnswerButton)
         view.addSubview(circleImageView)
+        view.addSubview(finishedResultLabel)
         
         NSLayoutConstraint.activate([
             self.stackWithButtons.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -191,7 +201,10 @@ class QuestionVC: UIViewController {
             self.circleImageView.widthAnchor.constraint(equalToConstant: 200),
             self.circleImageView.heightAnchor.constraint(equalToConstant: 200),
             self.circleImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            self.circleImageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+            self.circleImageView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            
+            self.finishedResultLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            self.finishedResultLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
         ])
     }
     

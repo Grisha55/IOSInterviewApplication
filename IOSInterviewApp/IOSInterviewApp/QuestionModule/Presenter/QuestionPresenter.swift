@@ -44,6 +44,9 @@ class QuestionPresenter: QuestionPresenterProtocol {
         guard let dict = self.questionsDict, numberOfQuestions < dict.count else {
             questionView.answerTextView.text = "Вы закончили данный раздел"
             questionView.questionTextView.text = "Вы закончили данный раздел"
+            
+            hideAllElements()
+            
             self.saveDataIntoRealm()
             return
         }
@@ -58,12 +61,22 @@ class QuestionPresenter: QuestionPresenterProtocol {
         
     }
     
+    private func hideAllElements() {
+        questionView.unKnowButton.isHidden = true
+        questionView.knowButton.isHidden = true
+        questionView.answerTextView.isHidden = true
+        questionView.questionTextView.isHidden = true
+        questionView.showAnswerButton.isHidden = true
+    }
+    
     func knowButtonAction() {
         questionView.answerTextView.isHidden = true
         
         guard let dict = self.questionsDict, numberOfQuestions < dict.count else {
             questionView.answerTextView.text = "Вы закончили данный раздел"
             questionView.questionTextView.text = "Вы закончили данный раздел"
+            
+            hideAllElements()
             
             trueAnswers += 1
             
@@ -107,6 +120,8 @@ class QuestionPresenter: QuestionPresenterProtocol {
         
         questionView.shapeLayer.isHidden = false
         questionView.circleImageView.isHidden = false
+        questionView.finishedResultLabel.isHidden = false
+        questionView.finishedResultLabel.text = "\(lastElement.procents)%"
         
         let value = Float(lastElement.procents) / 100.0
         questionView.startCustomAnimation(to: value)
