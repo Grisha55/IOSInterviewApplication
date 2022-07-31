@@ -181,6 +181,11 @@ class LogInVC: UIViewController {
                     guard let self = self else { return }
                     self.customWaveView.percentAnimation()
                 }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [weak self] in
+                    guard let self = self else { return }
+                    self.unHideAllElements(hide: false)
+                })
             }
         })
         UserDefaults.standard.set(false, forKey: "darkModeIsOn")
@@ -188,11 +193,26 @@ class LogInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .purple
-        
+        unHideAllElements(hide: true)
         setupUI()
         loginViewModel.skipingAuthIfUserIs()
         bind()
+    }
+    
+    private func unHideAllElements(hide: Bool) {
+        view.backgroundColor = .purple
+        loginView.isHidden = hide
+        passwordView.isHidden = hide
+        bottomView.isHidden = hide
+        loginLabel.isHidden = hide
+        logInLabel.isHidden = hide
+        loginTF.isHidden = hide
+        passwordLabel.isHidden = hide
+        passwordTF.isHidden = hide
+        closeButton.isHidden = hide
+        loginButton.isHidden = hide
+        logInButton.isHidden = hide
+        customWaveView.isHidden = !hide
     }
     
     private func bind() {
