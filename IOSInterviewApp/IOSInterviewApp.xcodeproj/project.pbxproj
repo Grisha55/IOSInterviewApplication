@@ -13,6 +13,7 @@
 		BE0489F12878B02800887CD0 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0489F02878B02800887CD0 /* Questions.swift */; };
 		BE42407926DFA424009A6FC8 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42407826DFA424009A6FC8 /* UserData.swift */; };
 		BE42407C26DFA674009A6FC8 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42407B26DFA674009A6FC8 /* FirebaseService.swift */; };
+		BE4970632896C715007667C6 /* CustomWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4970622896C715007667C6 /* CustomWaveView.swift */; };
 		BE7D981E2879728C00A50F4D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D981D2879728B00A50F4D /* LoginViewModel.swift */; };
 		BE7D982228797A2D00A50F4D /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D982128797A2D00A50F4D /* RegistrationViewModel.swift */; };
 		BE7D982728798C9D00A50F4D /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D982628798C9D00A50F4D /* SettingsPresenter.swift */; };
@@ -48,6 +49,7 @@
 		BE0489F02878B02800887CD0 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		BE42407826DFA424009A6FC8 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		BE42407B26DFA674009A6FC8 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		BE4970622896C715007667C6 /* CustomWaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWaveView.swift; sourceTree = "<group>"; };
 		BE7D981D2879728B00A50F4D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BE7D982128797A2D00A50F4D /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		BE7D982628798C9D00A50F4D /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
@@ -123,6 +125,14 @@
 				BE42407B26DFA674009A6FC8 /* FirebaseService.swift */,
 			);
 			path = FirebaseService;
+			sourceTree = "<group>";
+		};
+		BE4970612896C701007667C6 /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				BE4970622896C715007667C6 /* CustomWaveView.swift */,
+			);
+			path = CustomElements;
 			sourceTree = "<group>";
 		};
 		BE7D981F2879749300A50F4D /* View */ = {
@@ -292,6 +302,7 @@
 		BEDDCDF326DA1A9A003C1CB3 /* IOSInterviewApp */ = {
 			isa = PBXGroup;
 			children = (
+				BE4970612896C701007667C6 /* CustomElements */,
 				BEFD9B1A289153A300AFD9E4 /* Extensions */,
 				BE8BB78B287A18F2001F89F3 /* AppRouter */,
 				BE7D98312879A13800A50F4D /* Assembly */,
@@ -513,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE42407C26DFA674009A6FC8 /* FirebaseService.swift in Sources */,
+				BE4970632896C715007667C6 /* CustomWaveView.swift in Sources */,
 				BE7D98332879A14A00A50F4D /* AssemblyBuilder.swift in Sources */,
 				BE7D982F287994AA00A50F4D /* QuestionPresenter.swift in Sources */,
 				BEFD9B1C289153B800AFD9E4 /* UIColor+extension.swift in Sources */,
