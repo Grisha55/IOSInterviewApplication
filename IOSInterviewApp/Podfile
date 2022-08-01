@@ -6,6 +6,7 @@ target 'IOSInterviewApp' do
   use_frameworks!
 
   # Pods for IOSInterviewApp
+  pod 'Firebase'
   pod 'Firebase/Analytics'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
