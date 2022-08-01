@@ -14,6 +14,9 @@ class LogInVC: UIViewController {
     // MARK: - Properties
     let disposeBag = DisposeBag()
     var loginViewModel: LoginViewModel!
+    var customWaveView: CustomWaveView!
+    let dr: TimeInterval = 10.0
+    var timer: Timer?
     
     lazy var loginButton: UIButton = {
         let button = UIButton()
@@ -163,17 +166,53 @@ class LogInVC: UIViewController {
     
     override func loadView() {
         super.loadView()
-        
+        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { [weak self] _ in
+            guard let self = self else { return }
+            let dr = CGFloat(1.0 / (self.dr / 0.01))
+            
+            self.customWaveView.progress += dr
+            self.customWaveView.setupProgress(self.customWaveView.progress)
+            
+            if self.customWaveView.progress >= 0.95 {
+                self.timer?.invalidate()
+                self.timer = nil
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                    guard let self = self else { return }
+                    self.customWaveView.percentAnimation()
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [weak self] in
+                    guard let self = self else { return }
+                    self.unHideAllElements(hide: false)
+                })
+            }
+        })
         UserDefaults.standard.set(false, forKey: "darkModeIsOn")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .purple
-        
+        unHideAllElements(hide: true)
         setupUI()
         loginViewModel.skipingAuthIfUserIs()
         bind()
+    }
+    
+    private func unHideAllElements(hide: Bool) {
+        view.backgroundColor = .purple
+        loginView.isHidden = hide
+        passwordView.isHidden = hide
+        bottomView.isHidden = hide
+        loginLabel.isHidden = hide
+        logInLabel.isHidden = hide
+        loginTF.isHidden = hide
+        passwordLabel.isHidden = hide
+        passwordTF.isHidden = hide
+        closeButton.isHidden = hide
+        loginButton.isHidden = hide
+        logInButton.isHidden = hide
+        customWaveView.isHidden = !hide
     }
     
     private func bind() {
@@ -198,6 +237,8 @@ class LogInVC: UIViewController {
         view.addSubview(bottomView)
         view.addSubview(closeButton)
         view.addSubview(loginButton)
+        view.addSubview(customWaveView)
+        customWaveView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             self.loginButton.widthAnchor.constraint(equalToConstant: 60),
@@ -240,6 +281,11 @@ class LogInVC: UIViewController {
             
             self.logInLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 30),
             self.logInLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            
+            self.customWaveView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            self.customWaveView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            self.customWaveView.widthAnchor.constraint(equalToConstant: 200),
+            self.customWaveView.heightAnchor.constraint(equalToConstant: 200)
         ])
     }
     

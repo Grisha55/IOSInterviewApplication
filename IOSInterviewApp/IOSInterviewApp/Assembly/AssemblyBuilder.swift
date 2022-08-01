@@ -102,8 +102,10 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         let vc = LogInVC()
         let loginViewModel = LoginViewModel()
         let firebaseService = FirebaseService()
+        let customWaveView = CustomWaveView()
         
         vc.loginViewModel = loginViewModel
+        vc.customWaveView = customWaveView
         loginViewModel.firebaseService = firebaseService
         loginViewModel.router = router
         
