@@ -16,6 +16,7 @@
 		BE3E42D42897F3910075E7B8 /* IOSInterviewAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3E42D32897F3910075E7B8 /* IOSInterviewAppUITestsLaunchTests.swift */; };
 		BE3E42DE2897F4EB0075E7B8 /* LogInVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3E42DD2897F4EB0075E7B8 /* LogInVCTests.swift */; };
 		BE3E42E0289803E80075E7B8 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3E42DF289803E80075E7B8 /* LoginViewModelTests.swift */; };
+		BE3E42E2289807A20075E7B8 /* FirebaseServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3E42E1289807A20075E7B8 /* FirebaseServiceTests.swift */; };
 		BE42407926DFA424009A6FC8 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42407826DFA424009A6FC8 /* UserData.swift */; };
 		BE42407C26DFA674009A6FC8 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42407B26DFA674009A6FC8 /* FirebaseService.swift */; };
 		BE4970632896C715007667C6 /* CustomWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4970622896C715007667C6 /* CustomWaveView.swift */; };
@@ -76,6 +77,7 @@
 		BE3E42D32897F3910075E7B8 /* IOSInterviewAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSInterviewAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BE3E42DD2897F4EB0075E7B8 /* LogInVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVCTests.swift; sourceTree = "<group>"; };
 		BE3E42DF289803E80075E7B8 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		BE3E42E1289807A20075E7B8 /* FirebaseServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServiceTests.swift; sourceTree = "<group>"; };
 		BE42407826DFA424009A6FC8 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		BE42407B26DFA674009A6FC8 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		BE4970622896C715007667C6 /* CustomWaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWaveView.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		BE3E42DA2897F4410075E7B8 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				BE3E42E1289807A20075E7B8 /* FirebaseServiceTests.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -675,6 +678,7 @@
 			files = (
 				BE3E42E0289803E80075E7B8 /* LoginViewModelTests.swift in Sources */,
 				BE3E42DE2897F4EB0075E7B8 /* LogInVCTests.swift in Sources */,
+				BE3E42E2289807A20075E7B8 /* FirebaseServiceTests.swift in Sources */,
 				BE3E42C52897F3740075E7B8 /* IOSInterviewAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
