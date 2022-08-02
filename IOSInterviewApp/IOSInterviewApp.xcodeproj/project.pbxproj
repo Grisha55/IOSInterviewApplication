@@ -19,6 +19,7 @@
 		BE3E42E2289807A20075E7B8 /* FirebaseServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3E42E1289807A20075E7B8 /* FirebaseServiceTests.swift */; };
 		BE3E42E428985DDA0075E7B8 /* RegistrationVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3E42E328985DDA0075E7B8 /* RegistrationVCTests.swift */; };
 		BE3E42E628986DE90075E7B8 /* RegistrationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3E42E528986DE90075E7B8 /* RegistrationViewModelTests.swift */; };
+		BE3E42E828986F450075E7B8 /* MenuVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3E42E728986F450075E7B8 /* MenuVCTests.swift */; };
 		BE42407926DFA424009A6FC8 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42407826DFA424009A6FC8 /* UserData.swift */; };
 		BE42407C26DFA674009A6FC8 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42407B26DFA674009A6FC8 /* FirebaseService.swift */; };
 		BE4970632896C715007667C6 /* CustomWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4970622896C715007667C6 /* CustomWaveView.swift */; };
@@ -82,6 +83,7 @@
 		BE3E42E1289807A20075E7B8 /* FirebaseServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServiceTests.swift; sourceTree = "<group>"; };
 		BE3E42E328985DDA0075E7B8 /* RegistrationVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVCTests.swift; sourceTree = "<group>"; };
 		BE3E42E528986DE90075E7B8 /* RegistrationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModelTests.swift; sourceTree = "<group>"; };
+		BE3E42E728986F450075E7B8 /* MenuVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVCTests.swift; sourceTree = "<group>"; };
 		BE42407826DFA424009A6FC8 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		BE42407B26DFA674009A6FC8 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		BE4970622896C715007667C6 /* CustomWaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWaveView.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			children = (
 				BE3E42DD2897F4EB0075E7B8 /* LogInVCTests.swift */,
 				BE3E42E328985DDA0075E7B8 /* RegistrationVCTests.swift */,
+				BE3E42E728986F450075E7B8 /* MenuVCTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3E42E828986F450075E7B8 /* MenuVCTests.swift in Sources */,
 				BE3E42E0289803E80075E7B8 /* LoginViewModelTests.swift in Sources */,
 				BE3E42DE2897F4EB0075E7B8 /* LogInVCTests.swift in Sources */,
 				BE3E42E628986DE90075E7B8 /* RegistrationViewModelTests.swift in Sources */,
