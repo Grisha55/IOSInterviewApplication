@@ -293,7 +293,7 @@ class RegistrationVC: UIViewController {
             self.topView.topAnchor.constraint(equalTo: self.view.topAnchor),
             self.topView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             self.topView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            self.topView.heightAnchor.constraint(equalToConstant: 70)
+            self.topView.heightAnchor.constraint(equalToConstant: 100)
         ])
     }
     
