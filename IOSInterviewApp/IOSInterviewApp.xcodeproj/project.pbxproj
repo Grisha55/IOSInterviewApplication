@@ -38,6 +38,7 @@
 		BEA9101E2899A97B000E0D75 /* QuestionVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9101D2899A97B000E0D75 /* QuestionVCTests.swift */; };
 		BEA910212899AC52000E0D75 /* QuestionPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA910202899AC52000E0D75 /* QuestionPresenterTests.swift */; };
 		BEA910252899B161000E0D75 /* CategoriesVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA910242899B161000E0D75 /* CategoriesVCTests.swift */; };
+		BEA910272899C0D3000E0D75 /* CategoriesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA910262899C0D3000E0D75 /* CategoriesPresenterTests.swift */; };
 		BEDDCDF526DA1A9A003C1CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */; };
 		BEDDCDF726DA1A9A003C1CB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */; };
 		BEDDCDF926DA1A9A003C1CB3 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCDF826DA1A9A003C1CB3 /* RegistrationVC.swift */; };
@@ -106,6 +107,7 @@
 		BEA9101D2899A97B000E0D75 /* QuestionVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVCTests.swift; sourceTree = "<group>"; };
 		BEA910202899AC52000E0D75 /* QuestionPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenterTests.swift; sourceTree = "<group>"; };
 		BEA910242899B161000E0D75 /* CategoriesVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVCTests.swift; sourceTree = "<group>"; };
+		BEA910262899C0D3000E0D75 /* CategoriesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenterTests.swift; sourceTree = "<group>"; };
 		BEDDCDF126DA1A9A003C1CB3 /* IOSInterviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSInterviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				BEA910202899AC52000E0D75 /* QuestionPresenterTests.swift */,
+				BEA910262899C0D3000E0D75 /* CategoriesPresenterTests.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -711,6 +714,7 @@
 				BE3E42E628986DE90075E7B8 /* RegistrationViewModelTests.swift in Sources */,
 				BE3E42E2289807A20075E7B8 /* FirebaseServiceTests.swift in Sources */,
 				BEA910252899B161000E0D75 /* CategoriesVCTests.swift in Sources */,
+				BEA910272899C0D3000E0D75 /* CategoriesPresenterTests.swift in Sources */,
 				BEA9101E2899A97B000E0D75 /* QuestionVCTests.swift in Sources */,
 				BEA910212899AC52000E0D75 /* QuestionPresenterTests.swift in Sources */,
 				BE3E42C52897F3740075E7B8 /* IOSInterviewAppTests.swift in Sources */,
