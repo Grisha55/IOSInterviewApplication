@@ -36,6 +36,7 @@
 		BE9F87A826DF9EBD00743499 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */; };
 		BEA9101C28991DC3000E0D75 /* MenuViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9101B28991DC3000E0D75 /* MenuViewModelTests.swift */; };
 		BEA9101E2899A97B000E0D75 /* QuestionVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9101D2899A97B000E0D75 /* QuestionVCTests.swift */; };
+		BEA910212899AC52000E0D75 /* QuestionPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA910202899AC52000E0D75 /* QuestionPresenterTests.swift */; };
 		BEDDCDF526DA1A9A003C1CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */; };
 		BEDDCDF726DA1A9A003C1CB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */; };
 		BEDDCDF926DA1A9A003C1CB3 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCDF826DA1A9A003C1CB3 /* RegistrationVC.swift */; };
@@ -102,6 +103,7 @@
 		BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BEA9101B28991DC3000E0D75 /* MenuViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelTests.swift; sourceTree = "<group>"; };
 		BEA9101D2899A97B000E0D75 /* QuestionVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVCTests.swift; sourceTree = "<group>"; };
+		BEA910202899AC52000E0D75 /* QuestionPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenterTests.swift; sourceTree = "<group>"; };
 		BEDDCDF126DA1A9A003C1CB3 /* IOSInterviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSInterviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		BE3E42C32897F3740075E7B8 /* IOSInterviewAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				BEA9101F2899AC33000E0D75 /* Presenters */,
 				BE3E42DC2897F4650075E7B8 /* ViewModel */,
 				BE3E42DB2897F44D0075E7B8 /* View */,
 				BE3E42DA2897F4410075E7B8 /* Manager */,
@@ -383,6 +386,14 @@
 				BE8BB791287A410C001F89F3 /* CategoriesPresenter.swift */,
 			);
 			name = Presenter;
+			sourceTree = "<group>";
+		};
+		BEA9101F2899AC33000E0D75 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				BEA910202899AC52000E0D75 /* QuestionPresenterTests.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		BEDDCDE826DA1A9A003C1CB3 = {
@@ -697,6 +708,7 @@
 				BE3E42E628986DE90075E7B8 /* RegistrationViewModelTests.swift in Sources */,
 				BE3E42E2289807A20075E7B8 /* FirebaseServiceTests.swift in Sources */,
 				BEA9101E2899A97B000E0D75 /* QuestionVCTests.swift in Sources */,
+				BEA910212899AC52000E0D75 /* QuestionPresenterTests.swift in Sources */,
 				BE3E42C52897F3740075E7B8 /* IOSInterviewAppTests.swift in Sources */,
 				BE3E42E428985DDA0075E7B8 /* RegistrationVCTests.swift in Sources */,
 				BEA9101C28991DC3000E0D75 /* MenuViewModelTests.swift in Sources */,
