@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CategoriesPresenterProtocol: AnyObject {
-    var names: [String] { get }
+    var names: [String] { get set }
     func transiteModuleName(indexPath: IndexPath)
     func countOfQuestions(name: String) -> Int
 }
@@ -16,7 +16,7 @@ protocol CategoriesPresenterProtocol: AnyObject {
 class CategoriesPresenter: CategoriesPresenterProtocol {
     
     var router: RouterProtocol!
-    let names = ["swift", "network", "multithrading", "ui", "dataBase", "patterns"]
+    var names = ["swift", "network", "multithrading", "ui", "dataBase", "patterns"]
     var questions: QuestionsProtocol!
     
     func transiteModuleName(indexPath: IndexPath) {
