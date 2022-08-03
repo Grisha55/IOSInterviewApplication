@@ -9,11 +9,6 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol MenuPresenterProtocol: AnyObject {
-    func resultsButtonTapped()
-    func categoriesButtonTapped()
-}
-
 class MenuViewModel {
     
     private let bag = DisposeBag()

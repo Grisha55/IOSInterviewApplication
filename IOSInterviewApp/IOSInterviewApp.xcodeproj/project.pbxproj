@@ -19,6 +19,7 @@
 		BE3E42E2289807A20075E7B8 /* FirebaseServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3E42E1289807A20075E7B8 /* FirebaseServiceTests.swift */; };
 		BE3E42E428985DDA0075E7B8 /* RegistrationVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3E42E328985DDA0075E7B8 /* RegistrationVCTests.swift */; };
 		BE3E42E628986DE90075E7B8 /* RegistrationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3E42E528986DE90075E7B8 /* RegistrationViewModelTests.swift */; };
+		BE3E42E828986F450075E7B8 /* MenuVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3E42E728986F450075E7B8 /* MenuVCTests.swift */; };
 		BE42407926DFA424009A6FC8 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42407826DFA424009A6FC8 /* UserData.swift */; };
 		BE42407C26DFA674009A6FC8 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42407B26DFA674009A6FC8 /* FirebaseService.swift */; };
 		BE4970632896C715007667C6 /* CustomWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4970622896C715007667C6 /* CustomWaveView.swift */; };
@@ -33,6 +34,11 @@
 		BE8BB78F287A3F91001F89F3 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8BB78E287A3F91001F89F3 /* MenuViewModel.swift */; };
 		BE8BB792287A410C001F89F3 /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8BB791287A410C001F89F3 /* CategoriesPresenter.swift */; };
 		BE9F87A826DF9EBD00743499 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */; };
+		BEA9101C28991DC3000E0D75 /* MenuViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9101B28991DC3000E0D75 /* MenuViewModelTests.swift */; };
+		BEA9101E2899A97B000E0D75 /* QuestionVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9101D2899A97B000E0D75 /* QuestionVCTests.swift */; };
+		BEA910212899AC52000E0D75 /* QuestionPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA910202899AC52000E0D75 /* QuestionPresenterTests.swift */; };
+		BEA910252899B161000E0D75 /* CategoriesVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA910242899B161000E0D75 /* CategoriesVCTests.swift */; };
+		BEA910272899C0D3000E0D75 /* CategoriesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA910262899C0D3000E0D75 /* CategoriesPresenterTests.swift */; };
 		BEDDCDF526DA1A9A003C1CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */; };
 		BEDDCDF726DA1A9A003C1CB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */; };
 		BEDDCDF926DA1A9A003C1CB3 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCDF826DA1A9A003C1CB3 /* RegistrationVC.swift */; };
@@ -82,6 +88,7 @@
 		BE3E42E1289807A20075E7B8 /* FirebaseServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServiceTests.swift; sourceTree = "<group>"; };
 		BE3E42E328985DDA0075E7B8 /* RegistrationVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVCTests.swift; sourceTree = "<group>"; };
 		BE3E42E528986DE90075E7B8 /* RegistrationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModelTests.swift; sourceTree = "<group>"; };
+		BE3E42E728986F450075E7B8 /* MenuVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVCTests.swift; sourceTree = "<group>"; };
 		BE42407826DFA424009A6FC8 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		BE42407B26DFA674009A6FC8 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		BE4970622896C715007667C6 /* CustomWaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWaveView.swift; sourceTree = "<group>"; };
@@ -96,6 +103,11 @@
 		BE8BB78E287A3F91001F89F3 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		BE8BB791287A410C001F89F3 /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
 		BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BEA9101B28991DC3000E0D75 /* MenuViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelTests.swift; sourceTree = "<group>"; };
+		BEA9101D2899A97B000E0D75 /* QuestionVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVCTests.swift; sourceTree = "<group>"; };
+		BEA910202899AC52000E0D75 /* QuestionPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenterTests.swift; sourceTree = "<group>"; };
+		BEA910242899B161000E0D75 /* CategoriesVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVCTests.swift; sourceTree = "<group>"; };
+		BEA910262899C0D3000E0D75 /* CategoriesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenterTests.swift; sourceTree = "<group>"; };
 		BEDDCDF126DA1A9A003C1CB3 /* IOSInterviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSInterviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDDCDF426DA1A9A003C1CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEDDCDF626DA1A9A003C1CB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +175,7 @@
 		BE3E42C32897F3740075E7B8 /* IOSInterviewAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				BEA9101F2899AC33000E0D75 /* Presenters */,
 				BE3E42DC2897F4650075E7B8 /* ViewModel */,
 				BE3E42DB2897F44D0075E7B8 /* View */,
 				BE3E42DA2897F4410075E7B8 /* Manager */,
@@ -193,6 +206,9 @@
 			children = (
 				BE3E42DD2897F4EB0075E7B8 /* LogInVCTests.swift */,
 				BE3E42E328985DDA0075E7B8 /* RegistrationVCTests.swift */,
+				BE3E42E728986F450075E7B8 /* MenuVCTests.swift */,
+				BEA9101D2899A97B000E0D75 /* QuestionVCTests.swift */,
+				BEA910242899B161000E0D75 /* CategoriesVCTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +218,7 @@
 			children = (
 				BE3E42DF289803E80075E7B8 /* LoginViewModelTests.swift */,
 				BE3E42E528986DE90075E7B8 /* RegistrationViewModelTests.swift */,
+				BEA9101B28991DC3000E0D75 /* MenuViewModelTests.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -374,6 +391,15 @@
 				BE8BB791287A410C001F89F3 /* CategoriesPresenter.swift */,
 			);
 			name = Presenter;
+			sourceTree = "<group>";
+		};
+		BEA9101F2899AC33000E0D75 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				BEA910202899AC52000E0D75 /* QuestionPresenterTests.swift */,
+				BEA910262899C0D3000E0D75 /* CategoriesPresenterTests.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		BEDDCDE826DA1A9A003C1CB3 = {
@@ -682,12 +708,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3E42E828986F450075E7B8 /* MenuVCTests.swift in Sources */,
 				BE3E42E0289803E80075E7B8 /* LoginViewModelTests.swift in Sources */,
 				BE3E42DE2897F4EB0075E7B8 /* LogInVCTests.swift in Sources */,
 				BE3E42E628986DE90075E7B8 /* RegistrationViewModelTests.swift in Sources */,
 				BE3E42E2289807A20075E7B8 /* FirebaseServiceTests.swift in Sources */,
+				BEA910252899B161000E0D75 /* CategoriesVCTests.swift in Sources */,
+				BEA910272899C0D3000E0D75 /* CategoriesPresenterTests.swift in Sources */,
+				BEA9101E2899A97B000E0D75 /* QuestionVCTests.swift in Sources */,
+				BEA910212899AC52000E0D75 /* QuestionPresenterTests.swift in Sources */,
 				BE3E42C52897F3740075E7B8 /* IOSInterviewAppTests.swift in Sources */,
 				BE3E42E428985DDA0075E7B8 /* RegistrationVCTests.swift in Sources */,
+				BEA9101C28991DC3000E0D75 /* MenuViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
