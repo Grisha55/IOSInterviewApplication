@@ -61,6 +61,7 @@ class SettingsVCTests: XCTestCase {
     func presentingLoginVC() -> LogInVC {
         let loginVC = LogInVC()
         loginVC.loginViewModel = LoginViewModel()
+        loginVC.loginViewModel.router = Router(navigationController: UINavigationController(), assemblyBuilder: AssemblyBuilder())
         return loginVC
     }
 

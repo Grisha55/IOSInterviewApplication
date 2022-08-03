@@ -27,6 +27,7 @@ class LogInVCTests: XCTestCase {
         sut.loginViewModel = loginViewModel
         sut.customWaveView = customWaveView
         loginViewModel.firebaseService = firebaseService
+        loginViewModel.router = Router(navigationController: UINavigationController(), assemblyBuilder: AssemblyBuilder())
         sut.loadViewIfNeeded()
     }
 
