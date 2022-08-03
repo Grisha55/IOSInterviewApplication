@@ -33,5 +33,21 @@ class RegistrationViewModelTests: XCTestCase {
     func testIfRouterIsNotNil() {
         XCTAssertNotNil(sut.router)
     }
+    
+    func testIfUserDataIsValid() {
+    
+        let login = "someTestableLogin"
+        let password = "12345"
+        
+        XCTAssertEqual(isValid(login: login, password: password), true)
+    }
+    
+    func isValid(login: String, password: String) -> Bool {
+        if login.count > 4 && password.count > 4 {
+            return true
+        }
+        
+        return false
+    }
 
 }

@@ -46,7 +46,6 @@
 		BEDDCE0126DA1A9C003C1CB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDDCDFF26DA1A9C003C1CB3 /* LaunchScreen.storyboard */; };
 		BEDDCE1026DA56D6003C1CB3 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE0F26DA56D6003C1CB3 /* LogInVC.swift */; };
 		BEDDCE1526DAA711003C1CB3 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1426DAA711003C1CB3 /* MenuVC.swift */; };
-		BEDDCE1926DAA836003C1CB3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */; };
 		BEDDCE1C26DB6895003C1CB3 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE1B26DB6895003C1CB3 /* SettingsVC.swift */; };
 		BEDDCE2126DB7AB3003C1CB3 /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE2026DB7AB3003C1CB3 /* CategoriesVC.swift */; };
 		BEDDCE2326DB7FB2003C1CB3 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE2226DB7FB2003C1CB3 /* CategoryCell.swift */; };
@@ -121,7 +120,6 @@
 		BEDDCE0226DA1A9C003C1CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEDDCE0F26DA56D6003C1CB3 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		BEDDCE1426DAA711003C1CB3 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
-		BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BEDDCE1B26DB6895003C1CB3 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		BEDDCE2026DB7AB3003C1CB3 /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
 		BEDDCE2226DB7FB2003C1CB3 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
@@ -453,7 +451,6 @@
 				BEDDCE1F26DB7A91003C1CB3 /* CategoriesModule */,
 				BEDDCE1A26DB686F003C1CB3 /* SettingsModule */,
 				BEDDCE1326DAA6C7003C1CB3 /* MenuModule */,
-				BEDDCE1826DAA836003C1CB3 /* TabBarController.swift */,
 				BEDDCE0E26DA56B9003C1CB3 /* LoginModule */,
 				BEDDCE0D26DA5678003C1CB3 /* RegistrationModule */,
 				BEDDCDFD26DA1A9C003C1CB3 /* Assets.xcassets */,
@@ -770,7 +767,6 @@
 				BEDDCE2B26DCEF6E003C1CB3 /* ResultsVC.swift in Sources */,
 				BE7D982728798C9D00A50F4D /* SettingsPresenter.swift in Sources */,
 				BEDDCDF926DA1A9A003C1CB3 /* RegistrationVC.swift in Sources */,
-				BEDDCE1926DAA836003C1CB3 /* TabBarController.swift in Sources */,
 				BEDDCDF526DA1A9A003C1CB3 /* AppDelegate.swift in Sources */,
 				BEDDCE1526DAA711003C1CB3 /* MenuVC.swift in Sources */,
 				BEDDCDF726DA1A9A003C1CB3 /* SceneDelegate.swift in Sources */,
