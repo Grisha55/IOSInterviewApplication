@@ -53,6 +53,7 @@
 		BEDDCE2626DBAC4E003C1CB3 /* QuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE2526DBAC4E003C1CB3 /* QuestionVC.swift */; };
 		BEDDCE2B26DCEF6E003C1CB3 /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDCE2A26DCEF6E003C1CB3 /* ResultsVC.swift */; };
 		BEF74F48289A62F2008B41F3 /* ResultsVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF74F47289A62F2008B41F3 /* ResultsVCTests.swift */; };
+		BEF74F4A289A6B32008B41F3 /* ResultsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF74F49289A6B32008B41F3 /* ResultsPresenterTests.swift */; };
 		BEFD9B192891212E00AFD9E4 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFD9B182891212E00AFD9E4 /* ThemeModel.swift */; };
 		BEFD9B1C289153B800AFD9E4 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFD9B1B289153B800AFD9E4 /* UIColor+extension.swift */; };
 /* End PBXBuildFile section */
@@ -125,6 +126,7 @@
 		BEDDCE2526DBAC4E003C1CB3 /* QuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVC.swift; sourceTree = "<group>"; };
 		BEDDCE2A26DCEF6E003C1CB3 /* ResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsVC.swift; sourceTree = "<group>"; };
 		BEF74F47289A62F2008B41F3 /* ResultsVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsVCTests.swift; sourceTree = "<group>"; };
+		BEF74F49289A6B32008B41F3 /* ResultsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPresenterTests.swift; sourceTree = "<group>"; };
 		BEFD9B182891212E00AFD9E4 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		BEFD9B1B289153B800AFD9E4 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		C6239E7D12789DF75E79422B /* Pods-IOSInterviewApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSInterviewApp.debug.xcconfig"; path = "Target Support Files/Pods-IOSInterviewApp/Pods-IOSInterviewApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -401,6 +403,7 @@
 			children = (
 				BEA910202899AC52000E0D75 /* QuestionPresenterTests.swift */,
 				BEA910262899C0D3000E0D75 /* CategoriesPresenterTests.swift */,
+				BEF74F49289A6B32008B41F3 /* ResultsPresenterTests.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -716,6 +719,7 @@
 				BE3E42DE2897F4EB0075E7B8 /* LogInVCTests.swift in Sources */,
 				BE3E42E628986DE90075E7B8 /* RegistrationViewModelTests.swift in Sources */,
 				BE3E42E2289807A20075E7B8 /* FirebaseServiceTests.swift in Sources */,
+				BEF74F4A289A6B32008B41F3 /* ResultsPresenterTests.swift in Sources */,
 				BEA910252899B161000E0D75 /* CategoriesVCTests.swift in Sources */,
 				BEA910272899C0D3000E0D75 /* CategoriesPresenterTests.swift in Sources */,
 				BEA9101E2899A97B000E0D75 /* QuestionVCTests.swift in Sources */,
