@@ -25,7 +25,7 @@ class SettingsPresenterTests: XCTestCase {
         
         try super.tearDownWithError()
     }
-
+    
     func testWhenViewIsLoadedRouterNotNil() {
         XCTAssertNotNil(sut.router)
     }
@@ -33,5 +33,13 @@ class SettingsPresenterTests: XCTestCase {
     func testWhenViewIsLoadedFirebaseServiceNotNil() {
         XCTAssertNotNil(sut.firebaseService)
     }
-
+    
+    func testIfDeviceSupportIOS13() {
+        if #available(iOS 13.0, *) {
+            XCTAssertTrue(true)
+            return
+        }
+        XCTFail()
+    }
 }
+
