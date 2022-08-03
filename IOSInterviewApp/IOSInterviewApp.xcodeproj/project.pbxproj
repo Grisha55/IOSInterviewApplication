@@ -57,6 +57,7 @@
 		BEF74F4E289A719B008B41F3 /* SettingsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF74F4D289A719B008B41F3 /* SettingsPresenterTests.swift */; };
 		BEF74F50289A7DEC008B41F3 /* QuestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF74F4F289A7DEB008B41F3 /* QuestionTests.swift */; };
 		BEF74F52289A7F50008B41F3 /* AssemblyBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF74F51289A7F50008B41F3 /* AssemblyBuilderTests.swift */; };
+		BEF74F54289A8373008B41F3 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF74F53289A8373008B41F3 /* RouterTests.swift */; };
 		BEFD9B192891212E00AFD9E4 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFD9B182891212E00AFD9E4 /* ThemeModel.swift */; };
 		BEFD9B1C289153B800AFD9E4 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFD9B1B289153B800AFD9E4 /* UIColor+extension.swift */; };
 /* End PBXBuildFile section */
@@ -133,6 +134,7 @@
 		BEF74F4D289A719B008B41F3 /* SettingsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenterTests.swift; sourceTree = "<group>"; };
 		BEF74F4F289A7DEB008B41F3 /* QuestionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTests.swift; sourceTree = "<group>"; };
 		BEF74F51289A7F50008B41F3 /* AssemblyBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilderTests.swift; sourceTree = "<group>"; };
+		BEF74F53289A8373008B41F3 /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 		BEFD9B182891212E00AFD9E4 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		BEFD9B1B289153B800AFD9E4 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		C6239E7D12789DF75E79422B /* Pods-IOSInterviewApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSInterviewApp.debug.xcconfig"; path = "Target Support Files/Pods-IOSInterviewApp/Pods-IOSInterviewApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				BE3E42E1289807A20075E7B8 /* FirebaseServiceTests.swift */,
 				BEF74F4F289A7DEB008B41F3 /* QuestionTests.swift */,
 				BEF74F51289A7F50008B41F3 /* AssemblyBuilderTests.swift */,
+				BEF74F53289A8373008B41F3 /* RouterTests.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -732,6 +735,7 @@
 				BE3E42E2289807A20075E7B8 /* FirebaseServiceTests.swift in Sources */,
 				BEF74F4A289A6B32008B41F3 /* ResultsPresenterTests.swift in Sources */,
 				BEA910252899B161000E0D75 /* CategoriesVCTests.swift in Sources */,
+				BEF74F54289A8373008B41F3 /* RouterTests.swift in Sources */,
 				BEA910272899C0D3000E0D75 /* CategoriesPresenterTests.swift in Sources */,
 				BEA9101E2899A97B000E0D75 /* QuestionVCTests.swift in Sources */,
 				BEA910212899AC52000E0D75 /* QuestionPresenterTests.swift in Sources */,
