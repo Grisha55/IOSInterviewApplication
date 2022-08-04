@@ -33,9 +33,5 @@ class LoginViewModelTests: XCTestCase {
     func testWhenViewIsLoadedRouterNotNil() {
         XCTAssertNotNil(sut.router)
     }
-    
-    func testSomeActivity() {
-        XCTAssertFalse(sut.firebaseService.isAuthorized())
-    }
 
 }
