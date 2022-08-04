@@ -243,6 +243,9 @@ class RegistrationVC: UIViewController {
         view.addSubview(loginStack)
         view.addSubview(passwordStack)
         view.addSubview(registrationButton)
+        loginTF.delegate = self
+        nameTF.delegate = self
+        passwordTF.delegate = self
 
         NSLayoutConstraint.activate([
             self.registrationButton.topAnchor.constraint(equalTo: passwordStack.bottomAnchor, constant: 50),
@@ -297,4 +300,12 @@ class RegistrationVC: UIViewController {
         ])
     }
     
+}
+
+extension RegistrationVC: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 }
