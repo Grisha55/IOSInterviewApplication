@@ -14,6 +14,7 @@ class RegistrationVC: UIViewController {
     // Properties
     private let bag = DisposeBag()
     var registrationViewModel: RegistrationViewModel!
+    var alertsFactory: AlertsFactoryProtocol!
     
     lazy var registrationButton: UIButton = {
         var button = UIButton()
@@ -215,6 +216,7 @@ class RegistrationVC: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        registrationViewModel.delegate = self
         setupUI()
         self.navigationItem.setHidesBackButton(true, animated: true)
         bind()
@@ -298,6 +300,20 @@ class RegistrationVC: UIViewController {
             self.topView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
             self.topView.heightAnchor.constraint(equalToConstant: 100)
         ])
+    }
+    
+}
+
+extension RegistrationVC: RegistrationViewModelDelegate {
+    
+    func showWrongRegistrationEmail() {
+        let alert = alertsFactory.getAlert(by: .wrongRegistrationLogin)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showWrongRegistratioinPassword() {
+        let alert = alertsFactory.getAlert(by: .wrongRegistrationPassword)
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

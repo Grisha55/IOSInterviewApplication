@@ -89,8 +89,10 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         let vc = RegistrationVC()
         let registrationViewModel = RegistrationViewModel()
         let firebaseService = FirebaseService()
+        let alertsFactory = AlertsFactory()
         
         vc.registrationViewModel = registrationViewModel
+        vc.alertsFactory = alertsFactory
         registrationViewModel.firebaseService = firebaseService
         registrationViewModel.router = router
         
@@ -103,9 +105,11 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         let loginViewModel = LoginViewModel()
         let firebaseService = FirebaseService()
         let customWaveView = CustomWaveView()
+        let alertsFactory = AlertsFactory()
         
         vc.loginViewModel = loginViewModel
         vc.customWaveView = customWaveView
+        vc.alertsFactory = alertsFactory
         loginViewModel.firebaseService = firebaseService
         loginViewModel.router = router
         loginViewModel.customWaveView = customWaveView

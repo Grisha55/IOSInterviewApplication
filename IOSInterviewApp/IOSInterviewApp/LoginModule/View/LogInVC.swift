@@ -16,6 +16,7 @@ class LogInVC: UIViewController {
     var loginViewModel: LoginViewModel!
     var customWaveView: CustomWaveView!
     var timer: Timer?
+    var alertsFactory: AlertsFactoryProtocol!
     
     lazy var loginButton: UIButton = {
         let button = UIButton()
@@ -166,6 +167,8 @@ class LogInVC: UIViewController {
     override func loadView() {
         super.loadView()
         
+        loginViewModel.delegate = self
+        
         loginViewModel.startCircleWaveAnimation { [weak self] in
             guard let self = self else { return }
             self.unHideAllElements(hide: false)
@@ -271,6 +274,20 @@ class LogInVC: UIViewController {
             self.customWaveView.widthAnchor.constraint(equalToConstant: 200),
             self.customWaveView.heightAnchor.constraint(equalToConstant: 200)
         ])
+    }
+    
+}
+
+extension LogInVC: LoginViewModelDelegate {
+    
+    func showWrongLoginAlert() {
+        let alert = alertsFactory.getAlert(by: .wrongLoginEmail)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showWrongPasswordAlert() {
+        let alert = alertsFactory.getAlert(by: .wrongLoginPassword)
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
