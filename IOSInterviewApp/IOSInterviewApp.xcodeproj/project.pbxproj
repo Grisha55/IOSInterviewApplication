@@ -34,6 +34,7 @@
 		BE8BB78F287A3F91001F89F3 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8BB78E287A3F91001F89F3 /* MenuViewModel.swift */; };
 		BE8BB792287A410C001F89F3 /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8BB791287A410C001F89F3 /* CategoriesPresenter.swift */; };
 		BE9BE29B289D04FA00D49352 /* AlertsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9BE29A289D04FA00D49352 /* AlertsFactory.swift */; };
+		BE9BE29E289D177B00D49352 /* AlertsFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9BE29D289D177B00D49352 /* AlertsFactoryTests.swift */; };
 		BE9F87A826DF9EBD00743499 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */; };
 		BEA9101C28991DC3000E0D75 /* MenuViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9101B28991DC3000E0D75 /* MenuViewModelTests.swift */; };
 		BEA9101E2899A97B000E0D75 /* QuestionVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9101D2899A97B000E0D75 /* QuestionVCTests.swift */; };
@@ -110,6 +111,7 @@
 		BE8BB78E287A3F91001F89F3 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		BE8BB791287A410C001F89F3 /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
 		BE9BE29A289D04FA00D49352 /* AlertsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsFactory.swift; sourceTree = "<group>"; };
+		BE9BE29D289D177B00D49352 /* AlertsFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsFactoryTests.swift; sourceTree = "<group>"; };
 		BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BEA9101B28991DC3000E0D75 /* MenuViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelTests.swift; sourceTree = "<group>"; };
 		BEA9101D2899A97B000E0D75 /* QuestionVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVCTests.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				BEF74F4F289A7DEB008B41F3 /* QuestionTests.swift */,
 				BEF74F51289A7F50008B41F3 /* AssemblyBuilderTests.swift */,
 				BEF74F53289A8373008B41F3 /* RouterTests.swift */,
+				BE9BE29D289D177B00D49352 /* AlertsFactoryTests.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -738,6 +741,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEF74F50289A7DEC008B41F3 /* QuestionTests.swift in Sources */,
+				BE9BE29E289D177B00D49352 /* AlertsFactoryTests.swift in Sources */,
 				BE3E42E828986F450075E7B8 /* MenuVCTests.swift in Sources */,
 				BE3E42E0289803E80075E7B8 /* LoginViewModelTests.swift in Sources */,
 				BE3E42DE2897F4EB0075E7B8 /* LogInVCTests.swift in Sources */,
