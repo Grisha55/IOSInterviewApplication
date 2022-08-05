@@ -238,6 +238,8 @@ class LogInVC: UIViewController {
         view.addSubview(closeButton)
         view.addSubview(loginButton)
         view.addSubview(customWaveView)
+        loginTF.delegate = self
+        passwordTF.delegate = self
         customWaveView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -287,6 +289,15 @@ class LogInVC: UIViewController {
             self.customWaveView.widthAnchor.constraint(equalToConstant: 200),
             self.customWaveView.heightAnchor.constraint(equalToConstant: 200)
         ])
+    }
+    
+}
+
+extension LogInVC: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
 }
