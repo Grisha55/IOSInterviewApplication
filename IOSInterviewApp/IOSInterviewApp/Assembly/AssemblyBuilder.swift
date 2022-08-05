@@ -108,6 +108,7 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         vc.customWaveView = customWaveView
         loginViewModel.firebaseService = firebaseService
         loginViewModel.router = router
+        loginViewModel.customWaveView = customWaveView
         
         return vc
     }

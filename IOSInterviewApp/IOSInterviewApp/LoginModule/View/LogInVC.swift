@@ -15,7 +15,6 @@ class LogInVC: UIViewController {
     let disposeBag = DisposeBag()
     var loginViewModel: LoginViewModel!
     var customWaveView: CustomWaveView!
-    let dr: TimeInterval = 10.0
     var timer: Timer?
     
     lazy var loginButton: UIButton = {
@@ -166,28 +165,11 @@ class LogInVC: UIViewController {
     
     override func loadView() {
         super.loadView()
-        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { [weak self] _ in
+        
+        loginViewModel.startCircleWaveAnimation { [weak self] in
             guard let self = self else { return }
-            let dr = CGFloat(1.0 / (self.dr / 0.01))
-            
-            self.customWaveView.progress += dr
-            self.customWaveView.setupProgress(self.customWaveView.progress)
-            
-            if self.customWaveView.progress >= 0.95 {
-                self.timer?.invalidate()
-                self.timer = nil
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-                    guard let self = self else { return }
-                    self.customWaveView.percentAnimation()
-                }
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [weak self] in
-                    guard let self = self else { return }
-                    self.unHideAllElements(hide: false)
-                })
-            }
-        })
+            self.unHideAllElements(hide: false)
+        }
         UserDefaults.standard.set(false, forKey: "darkModeIsOn")
     }
     

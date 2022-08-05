@@ -22,6 +22,9 @@ class LoginViewModel {
     var firebaseService: FirebaseServiceProtocol!
     var router: RouterProtocol!
     var login: String?
+    var timer: Timer?
+    var customWaveView: CustomWaveView!
+    let dr: TimeInterval = 10.0
     
     func transform(_ input: Input) -> Output {
         
@@ -70,6 +73,30 @@ class LoginViewModel {
         } else {
             return
         }
+    }
+    
+    func startCircleWaveAnimation(completion: @escaping () -> Void) {
+        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { [weak self] _ in
+            guard let self = self else { return }
+            let dr = CGFloat(1.0 / (self.dr / 0.01))
+            
+            self.customWaveView.progress += dr
+            self.customWaveView.setupProgress(self.customWaveView.progress)
+            
+            if self.customWaveView.progress >= 0.95 {
+                self.timer?.invalidate()
+                self.timer = nil
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                    guard let self = self else { return }
+                    self.customWaveView.percentAnimation()
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    completion()
+                }
+            }
+        })
     }
     
 }
