@@ -16,8 +16,14 @@ protocol ViewModelType {
     func transform(_ input: Input) -> Output
 }
 
+protocol LoginViewModelDelegate: AnyObject {
+    func showWrongLoginAlert()
+    func showWrongPasswordAlert()
+}
+
 class LoginViewModel {
     
+    weak var delegate: LoginViewModelDelegate!
     let bag = DisposeBag()
     var firebaseService: FirebaseServiceProtocol!
     var router: RouterProtocol!
@@ -41,9 +47,25 @@ class LoginViewModel {
             .withLatestFrom(input.password)
             .drive(onNext: { [weak self] text in
                 guard let self = self else { return }
-                self.firebaseService.login(email: self.login ?? "", password: text ?? "") { (result) in
+                
+                guard let login = self.login, login != "" else {
+                    self.delegate.showWrongLoginAlert()
+                    return
+                }
+                
+                guard let password = text, password != "" else {
+                    self.delegate.showWrongPasswordAlert()
+                    return
+                }
+                
+                self.firebaseService.login(email: login, password: password) { (result) in
                     switch result {
                     case .failure(let error):
+                        if !login.contains("@") && !login.contains(".") {
+                            self.delegate.showWrongPasswordAlert()
+                        } else if password.count < 4 {
+                            self.delegate.showWrongLoginAlert()
+                        }
                         print(error)
                     case .success(_):
                         self.router.menuViewController()
@@ -62,8 +84,7 @@ class LoginViewModel {
     
     func isValid(login: Driver<String?>, password: Driver<String?>) -> Observable<Bool> {
         Observable.combineLatest(login.asObservable(), password.asObservable()).map({ (login, password) in
-            guard let login = login, let password = password else { return false }
-            return login.count > 5 && password.count > 5
+            return true
         })
     }
     

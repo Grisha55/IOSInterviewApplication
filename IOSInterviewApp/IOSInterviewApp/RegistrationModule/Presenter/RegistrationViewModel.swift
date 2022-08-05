@@ -9,6 +9,11 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+protocol RegistrationViewModelDelegate: AnyObject {
+    func showWrongRegistrationEmail()
+    func showWrongRegistratioinPassword()
+}
+
 class RegistrationViewModel {
     
     private let bag = DisposeBag()
@@ -16,6 +21,7 @@ class RegistrationViewModel {
     var router: RouterProtocol!
     private var name: String?
     private var login: String?
+    weak var delegate: RegistrationViewModelDelegate!
     
     func transform(_ input: Input) -> Output {
         input.validate
@@ -36,10 +42,25 @@ class RegistrationViewModel {
             .withLatestFrom(input.password)
             .drive(onNext: { [weak self] text in
                 guard let self = self else { return }
-                guard let name = self.name, let login = self.login, let text = text else { return }
-                self.firebaseService.register(name: name, email: login, password: text) { (result) in
+                
+                guard let name = self.name, let login = self.login else {
+                    self.delegate.showWrongRegistrationEmail()
+                    return
+                }
+                
+                guard let password = text else {
+                    self.delegate.showWrongRegistratioinPassword()
+                    return
+                }
+                
+                self.firebaseService.register(name: name, email: login, password: password) { (result) in
                     switch result {
                     case .failure(let error):
+                        if !login.contains("@") || !login.contains(".") {
+                            self.delegate.showWrongRegistrationEmail()
+                        } else if password.count < 4 {
+                            self.delegate.showWrongRegistratioinPassword()
+                        }
                         print(error.localizedDescription)
                     case .success(_):
                         self.router.menuViewController()
@@ -57,8 +78,7 @@ class RegistrationViewModel {
     
     func isValid(login: Driver<String?>, password: Driver<String?>) -> Observable<Bool> {
         Observable.combineLatest(login.asObservable(), password.asObservable()).map({ (login, password) in
-            guard let login = login, let password = password else { return false }
-            return login.count > 5 && password.count > 5
+            return true
         })
     }
     

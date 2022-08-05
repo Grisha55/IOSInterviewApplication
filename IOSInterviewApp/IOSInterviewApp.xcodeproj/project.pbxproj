@@ -33,6 +33,7 @@
 		BE8BB78D287A1920001F89F3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8BB78C287A1920001F89F3 /* Router.swift */; };
 		BE8BB78F287A3F91001F89F3 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8BB78E287A3F91001F89F3 /* MenuViewModel.swift */; };
 		BE8BB792287A410C001F89F3 /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8BB791287A410C001F89F3 /* CategoriesPresenter.swift */; };
+		BE9BE29B289D04FA00D49352 /* AlertsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9BE29A289D04FA00D49352 /* AlertsFactory.swift */; };
 		BE9F87A826DF9EBD00743499 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */; };
 		BEA9101C28991DC3000E0D75 /* MenuViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9101B28991DC3000E0D75 /* MenuViewModelTests.swift */; };
 		BEA9101E2899A97B000E0D75 /* QuestionVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9101D2899A97B000E0D75 /* QuestionVCTests.swift */; };
@@ -108,6 +109,7 @@
 		BE8BB78C287A1920001F89F3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		BE8BB78E287A3F91001F89F3 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		BE8BB791287A410C001F89F3 /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
+		BE9BE29A289D04FA00D49352 /* AlertsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsFactory.swift; sourceTree = "<group>"; };
 		BE9F87A726DF9EBD00743499 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BEA9101B28991DC3000E0D75 /* MenuViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelTests.swift; sourceTree = "<group>"; };
 		BEA9101D2899A97B000E0D75 /* QuestionVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVCTests.swift; sourceTree = "<group>"; };
@@ -410,6 +412,14 @@
 			name = Presenter;
 			sourceTree = "<group>";
 		};
+		BE9BE29C289D12D600D49352 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				BE9BE29A289D04FA00D49352 /* AlertsFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 		BEA9101F2899AC33000E0D75 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +456,7 @@
 		BEDDCDF326DA1A9A003C1CB3 /* IOSInterviewApp */ = {
 			isa = PBXGroup;
 			children = (
+				BE9BE29C289D12D600D49352 /* Factories */,
 				BE4970612896C701007667C6 /* CustomElements */,
 				BEFD9B1A289153A300AFD9E4 /* Extensions */,
 				BE8BB78B287A18F2001F89F3 /* AppRouter */,
@@ -781,6 +792,7 @@
 				BEDDCDF926DA1A9A003C1CB3 /* RegistrationVC.swift in Sources */,
 				BEDDCDF526DA1A9A003C1CB3 /* AppDelegate.swift in Sources */,
 				BEDDCE1526DAA711003C1CB3 /* MenuVC.swift in Sources */,
+				BE9BE29B289D04FA00D49352 /* AlertsFactory.swift in Sources */,
 				BEDDCDF726DA1A9A003C1CB3 /* SceneDelegate.swift in Sources */,
 				BE42407926DFA424009A6FC8 /* UserData.swift in Sources */,
 				BE0489ED2878A28700887CD0 /* ResultsCell.swift in Sources */,
